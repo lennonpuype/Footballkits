@@ -48,6 +48,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
                 name: subJSON["name"].stringValue,
                 age: subJSON["age"].intValue,
                 alive: subJSON["alive"].boolValue,
+                active: subJSON["active"].boolValue,
                 team: subJSON["team"].stringValue,
                 biggest_period: subJSON["biggest_period"].arrayValue,
                 national: subJSON["national"].stringValue,
@@ -69,6 +70,12 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         
         myCell.footballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
         myCell.footballerName.text =  footballers!.list[indexPath.item].fullName
+        
+        myCell.footballerImage.layer.cornerRadius =  20;
+        myCell.footballerImage.layer.borderColor =  UIColor.customPurple.cgColor;
+        myCell.footballerImage.layer.borderWidth =  4;
+        
+        
         return myCell;
     }
 
