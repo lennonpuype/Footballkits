@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		C355F468224409070020FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F466224409070020FF43 /* Main.storyboard */; };
 		C355F46A224409070020FF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C355F469224409070020FF43 /* Assets.xcassets */; };
 		C355F46D224409070020FF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F46B224409070020FF43 /* LaunchScreen.storyboard */; };
+		C3ED0563225A1FD500692FAA /* footballers.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED0562225A1FD500692FAA /* footballers.json */; };
+		C3ED0566225A202A00692FAA /* Footballer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED0565225A202A00692FAA /* Footballer.swift */; };
+		C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED0567225A21D100692FAA /* AllFootballers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C355F469224409070020FF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C355F46C224409070020FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C355F46E224409070020FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3ED0562225A1FD500692FAA /* footballers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = footballers.json; sourceTree = "<group>"; };
+		C3ED0565225A202A00692FAA /* Footballer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footballer.swift; sourceTree = "<group>"; };
+		C3ED0567225A21D100692FAA /* AllFootballers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFootballers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 		C3ED053C225A000700692FAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED0562225A1FD500692FAA /* footballers.json */,
+				C3ED0565225A202A00692FAA /* Footballer.swift */,
+				C3ED0567225A21D100692FAA /* AllFootballers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,7 +126,6 @@
 				7ED150CF7A6D375F676267E2 /* Pods-iPresent.debug.xcconfig */,
 				2D2A7C78F1DDC784CBC13506 /* Pods-iPresent.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C355F46D224409070020FF43 /* LaunchScreen.storyboard in Resources */,
+				C3ED0563225A1FD500692FAA /* footballers.json in Resources */,
 				C355F46A224409070020FF43 /* Assets.xcassets in Resources */,
 				C355F468224409070020FF43 /* Main.storyboard in Resources */,
 			);
@@ -236,6 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED0566225A202A00692FAA /* Footballer.swift in Sources */,
+				C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */,
 				C355F465224409070020FF43 /* ViewController.swift in Sources */,
 				C355F463224409070020FF43 /* AppDelegate.swift in Sources */,
 			);
