@@ -4,7 +4,7 @@
     {
       "id": 1,
       "fullName": "Lionel Messi",
-      "name": "messi",
+      "name": "Messi",
       "age": 31,
       "alive": true,
       "team": "FC Barcelona",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "fullName": "Cristiano Ronaldo",
-      "name": "ronaldo",
+      "name": "Ronaldo",
       "age": 34,
       "alive": true,
       "team": "Juventus",
@@ -24,7 +24,7 @@
     {
       "id": 3,
       "fullName": "Johan Cruyff",
-      "name": "cruyff",
+      "name": "Cruyff",
       "age": 69,
       "alive": false,
       "team": "none",
@@ -35,7 +35,7 @@
     {
       "id": 4,
       "fullName": "Neymar Jr.",
-      "name": "neymar",
+      "name": "Neymar",
       "age": 27,
       "alive": true,
       "team": "PSG",
@@ -45,7 +45,7 @@
     {
       "id": 5,
       "fullName": "Diego Maradona",
-      "name": "maradona",
+      "name": "Maradona",
       "age": 58,
       "alive": true,
       "team": "none",
@@ -56,7 +56,7 @@
     {
       "id": 6,
       "fullName": "David De Gea",
-      "name": "degea",
+      "name": "Degea",
       "age": 28,
       "alive": true,
       "team": "Manchester United",
@@ -66,7 +66,7 @@
     {
       "id": 7,
       "fullName": "Eusebio",
-      "name": "eusebio",
+      "name": "Eusebio",
       "age": 72,
       "alive": false,
       "biggest_period": ["SL Benfica"],
@@ -76,7 +76,7 @@
     {
       "id": 8,
       "fullName": "Pele",
-      "name": "pele",
+      "name": "Pele",
       "age": 78,
       "alive": true,
       "biggest_period": ["Santos"],
@@ -86,7 +86,7 @@
     {
       "id": 9,
       "fullName": "Beckenbauer",
-      "name": "beckenbauer",
+      "name": "Beckenbauer",
       "age": 73,
       "alive": true,
       "biggest_period": ["Bayern Munich"],
@@ -96,7 +96,7 @@
     {
       "id": 10,
       "fullName": "Eden Hazard",
-      "name": "hazard",
+      "name": "Hazard",
       "age": 28,
       "alive": true,
       "team": "Chelsea",
@@ -106,7 +106,7 @@
     {
       "id": 11,
       "fullName": "Paulo Maldini",
-      "name": "maldini",
+      "name": "Maldini",
       "age": 50,
       "alive": true,
       "biggest_period": ["AC Milan"],
@@ -116,7 +116,7 @@
     {
       "id": 12,
       "fullName": "Gianluigi Buffon",
-      "name": "buffon",
+      "name": "Buffon",
       "age": 41,
       "alive": true,
       "team": "PSG",
@@ -126,7 +126,7 @@
     {
       "id": 13,
       "fullName": "Javier Zanetti",
-      "name": "zanetti",
+      "name": "Zanetti",
       "age": 45,
       "alive": true,
       "biggest_period": ["Inter Milan"],
