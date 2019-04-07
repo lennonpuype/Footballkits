@@ -10,6 +10,7 @@
 		1BECC86E97302FA7EDCF362C /* Pods_iPresent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEDB920152526DFBE46531D /* Pods_iPresent.framework */; };
 		C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */; };
 		C3070CA7225A582E0007C197 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA6225A582E0007C197 /* UIColor.swift */; };
+		C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */; };
 		C355F463224409070020FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F462224409070020FF43 /* AppDelegate.swift */; };
 		C355F465224409070020FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F464224409070020FF43 /* ViewController.swift */; };
 		C355F468224409070020FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F466224409070020FF43 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		7ED150CF7A6D375F676267E2 /* Pods-iPresent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPresent.debug.xcconfig"; path = "Target Support Files/Pods-iPresent/Pods-iPresent.debug.xcconfig"; sourceTree = "<group>"; };
 		C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3070CA6225A582E0007C197 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerDetailViewController.swift; sourceTree = "<group>"; };
 		C355F45F224409070020FF43 /* iPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C355F462224409070020FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C355F464224409070020FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				C355F462224409070020FF43 /* AppDelegate.swift */,
 				C355F464224409070020FF43 /* ViewController.swift */,
 				C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */,
+				C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				C3ED0566225A202A00692FAA /* Footballer.swift in Sources */,
 				C3070CA7225A582E0007C197 /* UIColor.swift in Sources */,
 				C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */,
+				C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */,
 				C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */,
 				C355F465224409070020FF43 /* ViewController.swift in Sources */,
 				C355F463224409070020FF43 /* AppDelegate.swift in Sources */,

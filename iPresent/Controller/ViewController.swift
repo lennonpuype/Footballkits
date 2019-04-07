@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var footballers:AllFootballers?;
 
@@ -18,6 +18,13 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
+        changeBasicAppTheme();
+    }
+    
+    func changeBasicAppTheme(){
+        
+        
+        self.navigationController?.navigationBar.backItem?.title = "Go back"
     }
     
     func loadJSON(){
@@ -68,15 +75,30 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "footballer", for: indexPath)
             as! FootballerCollectionViewCell;
         
-        myCell.footballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
-        myCell.footballerName.text =  footballers!.list[indexPath.item].fullName
+        myCell.FootballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
+        myCell.FootballerName.text =  footballers!.list[indexPath.item].fullName
         
-        myCell.footballerImage.layer.cornerRadius =  20;
-        myCell.footballerImage.layer.borderColor =  UIColor.customPurple.cgColor;
-        myCell.footballerImage.layer.borderWidth =  4;
+        myCell.FootballerImage.layer.cornerRadius =  20;
+        myCell.FootballerImage.layer.borderColor =  UIColor.customPurple.cgColor;
+        myCell.FootballerImage.layer.borderWidth =  4;
         
         
         return myCell;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+        performSegue(withIdentifier: "gotoFootballerDetail", sender: indexPath);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoFootballerDetail"{
+            let vc = segue.destination as! FootballerDetailViewController;
+            let index = (sender as! IndexPath).item;
+            let selectedFootballer = footballers?.list[index];
+            vc.footballer = selectedFootballer;
+            
+        }
     }
 
 
