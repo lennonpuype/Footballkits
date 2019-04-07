@@ -10,6 +10,7 @@ import Foundation
 
 class Footballer{
     var id: Int;
+    var fullName: String;
     var name: String;
     var age: Int;
     var alive: Bool;
@@ -18,8 +19,9 @@ class Footballer{
     var national: String;
     var bio: String;
     
-    init(id: Int, name: String, age: Int, alive: Bool, team: String, biggest_period: Array<Any>, national: String, bio: String){
+    init(id: Int, fullName:String, name: String, age: Int, alive: Bool, team: String, biggest_period: Array<Any>, national: String, bio: String){
         self.id = id;
+        self.fullName = fullName;
         self.name = name;
         self.age = age;
         self.alive = alive;

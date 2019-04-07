@@ -6,6 +6,6 @@ target 'iPresent' do
   use_frameworks!
 
   # Pods for iPresent
-  pod 'SwiftyJSON', '~> 4.3'
+  pod 'SwiftyJSON', '~> 4.2'
 
 end

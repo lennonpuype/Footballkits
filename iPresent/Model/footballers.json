@@ -3,7 +3,8 @@
   "defFootballers": [
     {
       "id": 1,
-      "name": "Lionel Messi",
+      "fullName": "Lionel Messi",
+      "name": "messi",
       "age": 31,
       "alive": true,
       "team": "FC Barcelona",
@@ -12,7 +13,8 @@
     },
     {
       "id": 2,
-      "name": "Cristiano Ronaldo",
+      "fullName": "Cristiano Ronaldo",
+      "name": "ronaldo",
       "age": 34,
       "alive": true,
       "team": "Juventus",
@@ -21,7 +23,8 @@
     },
     {
       "id": 3,
-      "name": "Johan Cruyff",
+      "fullName": "Johan Cruyff",
+      "name": "cruyff",
       "age": 69,
       "alive": false,
       "team": "none",
@@ -31,7 +34,8 @@
     },
     {
       "id": 4,
-      "name": "Neymar Jr.",
+      "fullName": "Neymar Jr.",
+      "name": "neymar",
       "age": 27,
       "alive": true,
       "team": "PSG",
@@ -40,7 +44,8 @@
     },
     {
       "id": 5,
-      "name": "Diego Maradona",
+      "fullName": "Diego Maradona",
+      "name": "maradona",
       "age": 58,
       "alive": true,
       "team": "none",
@@ -50,7 +55,8 @@
     },
     {
       "id": 6,
-      "name": "David De Gea",
+      "fullName": "David De Gea",
+      "name": "degea",
       "age": 28,
       "alive": true,
       "team": "Manchester United",
@@ -59,7 +65,8 @@
     },
     {
       "id": 7,
-      "name": "Eusebio",
+      "fullName": "Eusebio",
+      "name": "eusebio",
       "age": 72,
       "alive": false,
       "biggest_period": ["SL Benfica"],
@@ -68,7 +75,8 @@
     },
     {
       "id": 8,
-      "name": "Pele",
+      "fullName": "Pele",
+      "name": "pele",
       "age": 78,
       "alive": true,
       "biggest_period": ["Santos"],
@@ -77,7 +85,8 @@
     },
     {
       "id": 9,
-      "name": "Beckenbauer",
+      "fullName": "Beckenbauer",
+      "name": "beckenbauer",
       "age": 73,
       "alive": true,
       "biggest_period": ["Bayern Munich"],
@@ -86,7 +95,8 @@
     },
     {
       "id": 10,
-      "name": "Eden Hazard",
+      "fullName": "Eden Hazard",
+      "name": "hazard",
       "age": 28,
       "alive": true,
       "team": "Chelsea",
@@ -95,7 +105,8 @@
     },
     {
       "id": 11,
-      "name": "Paulo Maldini",
+      "fullName": "Paulo Maldini",
+      "name": "maldini",
       "age": 50,
       "alive": true,
       "biggest_period": ["AC Milan"],
@@ -103,13 +114,24 @@
       "bio": "is an Italian former professional footballer who played as a left back and central defender for A.C. Milan and the Italy national team, who is widely regarded as the greatest defender ever, and as one of the greatest players of all time. He spent all 25 seasons of his career in the Serie A with Milan, before retiring at the age of 41 in 2009. He won 26 trophies with Milan: the UEFA Champions League five times, seven Serie A titles, one Coppa Italia, five Supercoppa Italiana titles, five European Super Cups, two Intercontinental Cups and one FIFA Club World Cup. Paolo Maldini is currently the co-owner of North American Soccer League (NASL) club Miami FC. He is also serving as sporting strategy & development director for Milan."
     },
     {
-      "id": 11,
-      "name": "Gianluigi Buffon",
+      "id": 12,
+      "fullName": "Gianluigi Buffon",
+      "name": "buffon",
       "age": 41,
       "alive": true,
       "team": "PSG",
       "national_team": "Italy",
       "bio": "is an Italian professional footballer who plays as a goalkeeper for French club Paris Saint-Germain. He is widely regarded by players, pundits and managers as one of the greatest goalkeepers of all time, and, by some, as the greatest ever."
+    },
+    {
+      "id": 13,
+      "fullName": "Javier Zanetti",
+      "name": "zanetti",
+      "age": 45,
+      "alive": true,
+      "biggest_period": ["Inter Milan"],
+      "national_team": "Argentina",
+      "bio": "With 1,114 official games played, he is seventh on the list of players in history with the most career appearances. He is also the foreign player with the most appearances in Serie A (615), and holds the fourth-most appearances in the league, behind only Paolo Maldini, Gianluigi Buffon and Francesco Totti. He is the most capped player in the history of Inter (858), and won 16 trophies with the club: five Scudetti, four Coppa Italia, four Supercoppa Italiana, one UEFA Cup, one Champions League and the FIFA Club World Cup. He is also the most capped player as captain in the Champions League (82)."
     }
   ]
 }

@@ -18,29 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="puu-tf-8a6">
-                                <rect key="frame" x="16" y="77" width="167" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8rD-kO-6Nq">
+                                <rect key="frame" x="16" y="49" width="343" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nAh-VR-qJ6">
-                                    <size key="itemSize" width="152" height="152"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jfb-kU-Vti">
+                                    <size key="itemSize" width="165" height="165"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="13D-Vp-OQi">
-                                        <rect key="frame" x="7.5" y="0.0" width="152" height="152"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footballer" id="j8v-qF-Iwe" customClass="FootballerCollectionViewCell" customModule="iPresent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-1M-W4g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="165"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.12641006169999999" green="1" blue="0.050825621770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.0" blue="0.2426712603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6kk-1M-W4g" secondAttribute="bottom" id="74k-dF-bMH"/>
+                                            <constraint firstAttribute="trailing" secondItem="6kk-1M-W4g" secondAttribute="trailing" id="GEl-As-yMj"/>
+                                            <constraint firstItem="6kk-1M-W4g" firstAttribute="leading" secondItem="j8v-qF-Iwe" secondAttribute="leading" id="Kd8-oA-o80"/>
+                                            <constraint firstItem="6kk-1M-W4g" firstAttribute="top" secondItem="j8v-qF-Iwe" secondAttribute="top" id="cMN-9U-RlS"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pmP-o6-HxO"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8rD-kO-6Nq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5DB-wi-oqJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8rD-kO-6Nq" secondAttribute="trailing" constant="16" id="TNu-X4-3R6"/>
+                            <constraint firstItem="8rD-kO-6Nq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hfc-U7-t7Z"/>
+                            <constraint firstItem="8rD-kO-6Nq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="ofw-GN-OPR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
