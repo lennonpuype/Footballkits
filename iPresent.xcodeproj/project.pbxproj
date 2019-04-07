@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BECC86E97302FA7EDCF362C /* Pods_iPresent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEDB920152526DFBE46531D /* Pods_iPresent.framework */; };
 		C355F463224409070020FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F462224409070020FF43 /* AppDelegate.swift */; };
 		C355F465224409070020FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F464224409070020FF43 /* ViewController.swift */; };
 		C355F468224409070020FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F466224409070020FF43 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2A7C78F1DDC784CBC13506 /* Pods-iPresent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPresent.release.xcconfig"; path = "Target Support Files/Pods-iPresent/Pods-iPresent.release.xcconfig"; sourceTree = "<group>"; };
+		3FEDB920152526DFBE46531D /* Pods_iPresent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPresent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ED150CF7A6D375F676267E2 /* Pods-iPresent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPresent.debug.xcconfig"; path = "Target Support Files/Pods-iPresent/Pods-iPresent.debug.xcconfig"; sourceTree = "<group>"; };
 		C355F45F224409070020FF43 /* iPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C355F462224409070020FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C355F464224409070020FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BECC86E97302FA7EDCF362C /* Pods_iPresent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				C355F461224409070020FF43 /* iPresent */,
 				C355F460224409070020FF43 /* Products */,
+				F3E1BD36A9CE2DA8F7876CB1 /* Pods */,
+				F28C1ADDA8FBBCAC7FE675D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,64 @@
 		C355F461224409070020FF43 /* iPresent */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED053B2259FFFF00692FAA /* View */,
+				C3ED053C225A000700692FAA /* Model */,
+				C3ED053D225A000E00692FAA /* Controller */,
+				C3ED053E225A007800692FAA /* Support Files */,
+			);
+			path = iPresent;
+			sourceTree = "<group>";
+		};
+		C3ED053B2259FFFF00692FAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C355F469224409070020FF43 /* Assets.xcassets */,
+				C355F466224409070020FF43 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3ED053C225A000700692FAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3ED053D225A000E00692FAA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				C355F462224409070020FF43 /* AppDelegate.swift */,
 				C355F464224409070020FF43 /* ViewController.swift */,
-				C355F466224409070020FF43 /* Main.storyboard */,
-				C355F469224409070020FF43 /* Assets.xcassets */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C3ED053E225A007800692FAA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				C355F46B224409070020FF43 /* LaunchScreen.storyboard */,
 				C355F46E224409070020FF43 /* Info.plist */,
 			);
-			path = iPresent;
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		F28C1ADDA8FBBCAC7FE675D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDB920152526DFBE46531D /* Pods_iPresent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3E1BD36A9CE2DA8F7876CB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ED150CF7A6D375F676267E2 /* Pods-iPresent.debug.xcconfig */,
+				2D2A7C78F1DDC784CBC13506 /* Pods-iPresent.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C355F471224409070020FF43 /* Build configuration list for PBXNativeTarget "iPresent" */;
 			buildPhases = (
+				9B5C0C079D516E85726D8BF8 /* [CP] Check Pods Manifest.lock */,
 				C355F45B224409070020FF43 /* Sources */,
 				C355F45C224409070020FF43 /* Frameworks */,
 				C355F45D224409070020FF43 /* Resources */,
+				C6B0EBFB49108DAA444B2619 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +188,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B5C0C079D516E85726D8BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPresent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6B0EBFB49108DAA444B2619 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPresent/Pods-iPresent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPresent/Pods-iPresent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPresent/Pods-iPresent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C355F45B224409070020FF43 /* Sources */ = {
@@ -280,11 +381,12 @@
 		};
 		C355F472224409070020FF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED150CF7A6D375F676267E2 /* Pods-iPresent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69HN3J9BK7;
-				INFOPLIST_FILE = iPresent/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iPresent/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +400,12 @@
 		};
 		C355F473224409070020FF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2A7C78F1DDC784CBC13506 /* Pods-iPresent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69HN3J9BK7;
-				INFOPLIST_FILE = iPresent/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iPresent/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
