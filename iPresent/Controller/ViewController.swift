@@ -13,17 +13,26 @@ import SwiftyJSON
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
+    @IBOutlet weak var addKitButton: UIButton!
+    
+    
     var footballers:AllFootballers?;
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
-        changeBasicAppTheme();
+        //changeBasicAppTheme();
+        
         
     }
     
     func changeBasicAppTheme(){
+        
+        //My Collections
+        
+        
     }
     
     func loadJSON(){
@@ -100,6 +109,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
 
-
+    //IBActions on normal pages
+    @IBAction func addKit(_ sender: Any) {
+        print("Naar andere view")
+    }
 }
 
