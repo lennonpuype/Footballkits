@@ -15,6 +15,10 @@ class AddKitViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
    
     
+    @IBOutlet weak var playername: UITextField!
+    @IBOutlet weak var team: UITextField!
+    @IBOutlet weak var moreinfo: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,12 +39,16 @@ class AddKitViewController: UIViewController {
             print("Error saving context: \(error)");
         }
 
-        print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
+        
         
     }
     
     @IBAction func saveKitButton(_ sender: Any) {
-        self.saveKit(playername: "Messi", team: "Barcelona", moreinfo: "I got this shirt on a trip in Barcelona");
+        let playerName = playername.text!;String();
+        let playerTeam = team.text!;String();
+        let moreInfo = moreinfo.text!;String();
+        
+        self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
     }
 
     /*

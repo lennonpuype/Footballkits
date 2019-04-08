@@ -226,6 +226,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EbC-LI-f8H"/>
                     </view>
+                    <connections>
+                        <outlet property="moreinfo" destination="UgI-aM-S0x" id="ca2-Pt-FZJ"/>
+                        <outlet property="playername" destination="pTb-XL-Yhb" id="qDZ-yG-fCl"/>
+                        <outlet property="team" destination="ifw-DF-LwD" id="lTS-tt-HNB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLc-Mu-zLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
