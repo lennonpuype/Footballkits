@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Kit" representedClassName=".Kit" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="moreinfo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="playername" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Kit" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="Kit" positionX="-54" positionY="-9" width="128" height="105"/>
     </elements>
 </model>

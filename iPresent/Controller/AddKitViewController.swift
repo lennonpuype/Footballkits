@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
-class AddKitViewController: UIViewController {
+class AddKitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-
+    var imagePicker: UIImagePickerController!
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
    
     
@@ -19,6 +20,8 @@ class AddKitViewController: UIViewController {
     @IBOutlet weak var team: UITextField!
     @IBOutlet weak var moreinfo: UITextField!
     @IBOutlet weak var errorField: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +29,14 @@ class AddKitViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func saveKit(playername: String, team: String, moreinfo: String){
-       
+   
+    func saveKit(playername: String, team: String, moreinfo: String, image: UIImage){
         
        let kit = Kit(context:context);
         kit.playername = playername;
         kit.team = team;
         kit.moreinfo = moreinfo;
+       // kit.image = image;
 
         do{
             try context.save();
@@ -40,27 +44,37 @@ class AddKitViewController: UIViewController {
         } catch {
             print("Error saving context: \(error)");
         }
-
-        
-        
-        
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil);
+        imageView.image = info[.originalImage] as? UIImage;
+    }
+    
+    // MARK: -IBActions
     @IBAction func saveKitButton(_ sender: Any) {
         let playerName = playername.text!;String();
         let playerTeam = team.text!;String();
         let moreInfo = moreinfo.text!;String();
+        let currentImage = imageView.image!;UIImage();
         
         if(playerName == "" || playerTeam == "" || moreInfo == ""){
             errorField.isHidden = false
             view.endEditing(true)
         }else{
-            self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
+            self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo, image: currentImage);
         }
-        
-        
     }
 
+    @IBAction func takePic(_ sender: UIButton) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+   
+    
     /*
     // MARK: - Navigation
 
