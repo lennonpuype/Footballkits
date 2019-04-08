@@ -11,6 +11,7 @@ import UIKit
 class FootballerDetailViewController: UIViewController {
 
    
+
     @IBOutlet weak var footballerImage: UIImageView!
     @IBOutlet weak var footballerName: UILabel!
     

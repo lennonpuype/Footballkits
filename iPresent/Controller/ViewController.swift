@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
     var footballers:AllFootballers?;
 
     override func viewDidLoad() {
@@ -19,12 +20,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
         changeBasicAppTheme();
+        
     }
     
     func changeBasicAppTheme(){
-        
-        
-        self.navigationController?.navigationBar.backItem?.title = "Go back"
     }
     
     func loadJSON(){
