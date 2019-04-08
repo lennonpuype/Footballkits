@@ -12,6 +12,7 @@
 		C3070CA7225A582E0007C197 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA6225A582E0007C197 /* UIColor.swift */; };
 		C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */; };
 		C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CAE225B6E240007C197 /* AddKitViewController.swift */; };
+		C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */; };
 		C355F463224409070020FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F462224409070020FF43 /* AppDelegate.swift */; };
 		C355F465224409070020FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F464224409070020FF43 /* ViewController.swift */; };
 		C355F468224409070020FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F466224409070020FF43 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		C3070CA6225A582E0007C197 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerDetailViewController.swift; sourceTree = "<group>"; };
 		C3070CAE225B6E240007C197 /* AddKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKitViewController.swift; sourceTree = "<group>"; };
+		C3070CD6225B7DD10007C197 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C355F45F224409070020FF43 /* iPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C355F462224409070020FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C355F464224409070020FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		C3ED053C225A000700692FAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */,
 				C3ED0562225A1FD500692FAA /* footballers.json */,
 				C3ED0565225A202A00692FAA /* Footballer.swift */,
 				C3ED0567225A21D100692FAA /* AllFootballers.swift */,
@@ -271,6 +274,7 @@
 				C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */,
 				C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */,
 				C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */,
+				C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */,
 				C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */,
 				C355F465224409070020FF43 /* ViewController.swift in Sources */,
 				C355F463224409070020FF43 /* AppDelegate.swift in Sources */,
@@ -475,6 +479,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3070CD6225B7DD10007C197 /* Model.xcdatamodel */,
+			);
+			currentVersion = C3070CD6225B7DD10007C197 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C355F457224409070020FF43 /* Project object */;
 }
