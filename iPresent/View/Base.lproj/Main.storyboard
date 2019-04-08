@@ -218,6 +218,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveKitButton:" destination="2Dl-EF-eT8" eventType="touchUpInside" id="WN2-uW-Kje"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,29 +242,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messi" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-1b-hIr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEU-gF-j6a">
-                                <rect key="frame" x="16" y="154" width="324" height="36"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="CE8-1b-hIr" secondAttribute="bottom" constant="388" id="4gS-j7-xAX"/>
-                            <constraint firstItem="bEU-gF-j6a" firstAttribute="leading" secondItem="uhg-N6-kPg" secondAttribute="leading" constant="16" id="D0h-2b-PZl" userLabel="name_left"/>
-                            <constraint firstItem="uhg-N6-kPg" firstAttribute="trailing" secondItem="bEU-gF-j6a" secondAttribute="trailing" constant="35" id="ElK-Jq-YZg" userLabel="name_right"/>
                             <constraint firstItem="CE8-1b-hIr" firstAttribute="top" secondItem="uhg-N6-kPg" secondAttribute="top" id="KYN-eU-nak" userLabel="image_top"/>
-                            <constraint firstItem="bEU-gF-j6a" firstAttribute="top" secondItem="uhg-N6-kPg" secondAttribute="top" constant="154" id="PrA-sb-5nS" userLabel="name_top"/>
                             <constraint firstItem="CE8-1b-hIr" firstAttribute="trailing" secondItem="uhg-N6-kPg" secondAttribute="trailing" id="Xnb-oh-PXo" userLabel="image_right"/>
-                            <constraint firstItem="uhg-N6-kPg" firstAttribute="bottom" secondItem="bEU-gF-j6a" secondAttribute="bottom" constant="413" id="efp-qR-i1h" userLabel="name_bottom"/>
                             <constraint firstItem="CE8-1b-hIr" firstAttribute="leading" secondItem="uhg-N6-kPg" secondAttribute="leading" id="fCc-E6-nwU" userLabel="image_left"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uhg-N6-kPg"/>
                     </view>
                     <connections>
                         <outlet property="footballerImage" destination="CE8-1b-hIr" id="Zew-i7-4zZ"/>
-                        <outlet property="footballerName" destination="bEU-gF-j6a" id="Jqs-gK-pkC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1t-tD-Tda" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,6 +292,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Football Kit Collections" id="6xp-s9-9g5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7py-lz-6av">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
