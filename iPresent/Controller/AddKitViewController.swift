@@ -18,6 +18,7 @@ class AddKitViewController: UIViewController {
     @IBOutlet weak var playername: UITextField!
     @IBOutlet weak var team: UITextField!
     @IBOutlet weak var moreinfo: UITextField!
+    @IBOutlet weak var errorField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,12 @@ class AddKitViewController: UIViewController {
 
         do{
             try context.save();
+            navigationController!.popViewController(animated: true)
         } catch {
             print("Error saving context: \(error)");
         }
 
+        
         
         
     }
@@ -48,7 +51,14 @@ class AddKitViewController: UIViewController {
         let playerTeam = team.text!;String();
         let moreInfo = moreinfo.text!;String();
         
-        self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
+        if(playerName == "" || playerTeam == "" || moreInfo == ""){
+            errorField.isHidden = false
+            view.endEditing(true)
+        }else{
+            self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
+        }
+        
+        
     }
 
     /*

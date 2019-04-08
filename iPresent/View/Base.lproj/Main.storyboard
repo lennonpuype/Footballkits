@@ -222,11 +222,19 @@
                                     <action selector="saveKitButton:" destination="2Dl-EF-eT8" eventType="touchUpInside" id="WN2-uW-Kje"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pleas, fill in all the fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkE-TJ-PYC">
+                                <rect key="frame" x="100" y="375" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.2426712603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EbC-LI-f8H"/>
                     </view>
                     <connections>
+                        <outlet property="errorField" destination="dkE-TJ-PYC" id="6UR-u8-8kT"/>
                         <outlet property="moreinfo" destination="UgI-aM-S0x" id="ca2-Pt-FZJ"/>
                         <outlet property="playername" destination="pTb-XL-Yhb" id="qDZ-yG-fCl"/>
                         <outlet property="team" destination="ifw-DF-LwD" id="lTS-tt-HNB"/>
