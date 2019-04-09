@@ -83,6 +83,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "footballer", for: indexPath)
             as! FootballerCollectionViewCell;
         
+     
+        
         myCell.FootballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
         myCell.FootballerName.text =  footballers!.list[indexPath.item].fullName
         

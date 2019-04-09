@@ -128,6 +128,45 @@
             </objects>
             <point key="canvasLocation" x="2010" y="892"/>
         </scene>
+        <!--Kit Collection View Controller-->
+        <scene sceneID="IX4-Dr-p2a">
+            <objects>
+                <viewController id="VgB-sy-9ek" customClass="KitCollectionViewController" customModule="iPresent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="thp-4V-HF7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-B0-Nr2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RtP-Mh-IBW">
+                                    <size key="itemSize" width="99" height="99"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3BF-9I-2TN" customClass="KitCollectionViewCell" customModule="iPresent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.97806257870000002" blue="0.1570552049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3aH-ji-pZW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdQ-p0-Ivr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.60000000000002" y="890.55472263868069"/>
+        </scene>
         <!--My Collection-->
         <scene sceneID="WIH-ij-GSc">
             <objects>
@@ -149,8 +188,20 @@
                                     <segue destination="2Dl-EF-eT8" kind="show" id="qIQ-n9-F5c"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwb-Tn-Tdr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <connections>
+                                    <segue destination="VgB-sy-9ek" kind="embed" id="Mrc-ql-TZf"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bwb-Tn-Tdr" firstAttribute="top" secondItem="8rG-ny-qnI" secondAttribute="top" id="Cv5-BO-qgC"/>
+                            <constraint firstItem="bwb-Tn-Tdr" firstAttribute="trailing" secondItem="8rG-ny-qnI" secondAttribute="trailing" id="IIV-cO-0g7"/>
+                            <constraint firstItem="bwb-Tn-Tdr" firstAttribute="leading" secondItem="8rG-ny-qnI" secondAttribute="leading" id="k98-cJ-KJn"/>
+                            <constraint firstItem="bwb-Tn-Tdr" firstAttribute="bottom" secondItem="8rG-ny-qnI" secondAttribute="bottom" id="vtM-Od-Dbc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8rG-ny-qnI"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="My Collection" id="muo-y3-pdj">
@@ -326,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLc-Mu-zLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="1613.3433283358322"/>
+            <point key="canvasLocation" x="1071" y="1630"/>
         </scene>
         <!--Footballer Detail View Controller-->
         <scene sceneID="a9Y-bx-kp4">

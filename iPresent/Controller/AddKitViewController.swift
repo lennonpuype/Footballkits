@@ -30,14 +30,17 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
    
-    func saveKit(playername: String, team: String, moreinfo: String, image: UIImage){
+    func saveKit(playername: String, team: String, moreinfo: String){
         
        let kit = Kit(context:context);
+      
         kit.playername = playername;
         kit.team = team;
         kit.moreinfo = moreinfo;
        // kit.image = image;
 
+        //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
+        
         do{
             try context.save();
             navigationController!.popViewController(animated: true)
@@ -53,16 +56,19 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     
     // MARK: -IBActions
     @IBAction func saveKitButton(_ sender: Any) {
-        let playerName = playername.text!;String();
-        let playerTeam = team.text!;String();
-        let moreInfo = moreinfo.text!;String();
-        let currentImage = imageView.image!;UIImage();
+        let playerName:String
+        playerName = playername.text!
+        let playerTeam:String
+        playerTeam = team.text!
+        let moreInfo:String
+        moreInfo = moreinfo.text!
+        //let currentImage = imageView.image!;UIImage();
         
         if(playerName == "" || playerTeam == "" || moreInfo == ""){
             errorField.isHidden = false
             view.endEditing(true)
         }else{
-            self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo, image: currentImage);
+            self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
         }
     }
 
