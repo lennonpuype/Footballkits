@@ -11,8 +11,10 @@ import UIKit
 class FootballerDetailViewController: UIViewController {
 
    
+
     @IBOutlet weak var footballerImage: UIImageView!
     @IBOutlet weak var footballerName: UILabel!
+    
     
     var footballer:Footballer?;
     
@@ -21,7 +23,8 @@ class FootballerDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         footballerImage.image = UIImage(named: footballer!.name.lowercased());
-        footballerName.text = footballer?.name;
+       
+        footballerName.text = footballer?.fullName;
         
     }
     

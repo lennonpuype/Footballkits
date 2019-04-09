@@ -11,11 +11,15 @@
 		C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */; };
 		C3070CA7225A582E0007C197 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA6225A582E0007C197 /* UIColor.swift */; };
 		C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */; };
+		C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CAE225B6E240007C197 /* AddKitViewController.swift */; };
+		C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */; };
 		C355F463224409070020FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F462224409070020FF43 /* AppDelegate.swift */; };
 		C355F465224409070020FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355F464224409070020FF43 /* ViewController.swift */; };
 		C355F468224409070020FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F466224409070020FF43 /* Main.storyboard */; };
 		C355F46A224409070020FF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C355F469224409070020FF43 /* Assets.xcassets */; };
 		C355F46D224409070020FF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C355F46B224409070020FF43 /* LaunchScreen.storyboard */; };
+		C3A68314225CDF6500E792E4 /* KitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68313225CDF6500E792E4 /* KitCollectionViewController.swift */; };
+		C3A68316225CE5A600E792E4 /* KitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68315225CE5A600E792E4 /* KitCollectionViewCell.swift */; };
 		C3ED0563225A1FD500692FAA /* footballers.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED0562225A1FD500692FAA /* footballers.json */; };
 		C3ED0566225A202A00692FAA /* Footballer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED0565225A202A00692FAA /* Footballer.swift */; };
 		C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED0567225A21D100692FAA /* AllFootballers.swift */; };
@@ -28,6 +32,8 @@
 		C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3070CA6225A582E0007C197 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerDetailViewController.swift; sourceTree = "<group>"; };
+		C3070CAE225B6E240007C197 /* AddKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKitViewController.swift; sourceTree = "<group>"; };
+		C3070CD6225B7DD10007C197 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C355F45F224409070020FF43 /* iPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C355F462224409070020FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C355F464224409070020FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,8 @@
 		C355F469224409070020FF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C355F46C224409070020FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C355F46E224409070020FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A68313225CDF6500E792E4 /* KitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitCollectionViewController.swift; sourceTree = "<group>"; };
+		C3A68315225CE5A600E792E4 /* KitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3ED0562225A1FD500692FAA /* footballers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = footballers.json; sourceTree = "<group>"; };
 		C3ED0565225A202A00692FAA /* Footballer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footballer.swift; sourceTree = "<group>"; };
 		C3ED0567225A21D100692FAA /* AllFootballers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFootballers.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		C3ED053C225A000700692FAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */,
 				C3ED0562225A1FD500692FAA /* footballers.json */,
 				C3ED0565225A202A00692FAA /* Footballer.swift */,
 				C3ED0567225A21D100692FAA /* AllFootballers.swift */,
@@ -115,6 +124,9 @@
 				C355F464224409070020FF43 /* ViewController.swift */,
 				C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */,
 				C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */,
+				C3070CAE225B6E240007C197 /* AddKitViewController.swift */,
+				C3A68313225CDF6500E792E4 /* KitCollectionViewController.swift */,
+				C3A68315225CE5A600E792E4 /* KitCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,8 +280,12 @@
 				C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */,
 				C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */,
 				C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */,
+				C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */,
+				C3A68316225CE5A600E792E4 /* KitCollectionViewCell.swift in Sources */,
+				C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */,
 				C355F465224409070020FF43 /* ViewController.swift in Sources */,
 				C355F463224409070020FF43 /* AppDelegate.swift in Sources */,
+				C3A68314225CDF6500E792E4 /* KitCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +487,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3070CD6225B7DD10007C197 /* Model.xcdatamodel */,
+			);
+			currentVersion = C3070CD6225B7DD10007C197 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C355F457224409070020FF43 /* Project object */;
 }

@@ -12,19 +12,27 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBOutlet weak var addKitButton: UIButton!
+    
+    
     var footballers:AllFootballers?;
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
-        changeBasicAppTheme();
+        //changeBasicAppTheme();
+        
+        
     }
     
     func changeBasicAppTheme(){
         
+        //My Collections
         
-        self.navigationController?.navigationBar.backItem?.title = "Go back"
+        
     }
     
     func loadJSON(){
@@ -75,6 +83,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "footballer", for: indexPath)
             as! FootballerCollectionViewCell;
         
+     
+        
         myCell.FootballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
         myCell.FootballerName.text =  footballers!.list[indexPath.item].fullName
         
@@ -101,6 +111,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
 
-
+    //IBActions on normal pages
+    @IBAction func addKit(_ sender: Any) {
+        print("Naar andere view")
+    }
 }
 
