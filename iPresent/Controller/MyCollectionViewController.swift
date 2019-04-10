@@ -12,6 +12,9 @@ import SwiftyJSON
 class MyCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var myCollection:AllKits?;
+    var gl:CAGradientLayer!;
+    
+    @IBOutlet weak var LCGradientView: LDGradientView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +73,18 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         myCell.playerImage.image = UIImage(named: myCollection!.list[indexPath.item].name.lowercased())
         myCell.playerName.text =  myCollection!.list[indexPath.item].playerName
         
+        //Design van de cell
+        //Border rondom de cell
         myCell.layer.cornerRadius =  20;
         myCell.layer.borderColor =  UIColor.customPurple.cgColor;
         myCell.layer.borderWidth =  4;
+        
+        //Border rondom img
+        
+        myCell.playerImage.layer.borderColor =  UIColor.customPurple.cgColor;
+        myCell.playerImage.layer.borderWidth =  4;
+        
+       
         
         return myCell;
     }

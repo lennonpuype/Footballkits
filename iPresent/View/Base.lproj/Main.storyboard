@@ -531,11 +531,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="340" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-3N-6ID" userLabel="kit_img">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho_kit" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-3N-6ID" userLabel="kit_img">
                                                     <rect key="frame" x="0.0" y="0.0" width="268" height="156"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUU-cK-8Un" userLabel="player_img">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho" translatesAutoresizingMaskIntoConstraints="NO" id="tUU-cK-8Un" userLabel="player_img">
                                                     <rect key="frame" x="194.5" y="0.0" width="145" height="156"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Rw5-dy-hF9">
+                                                    <rect key="frame" x="-0.5" y="0.0" width="340" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qym-Ps-dyL">
                                                     <rect key="frame" x="20" y="117" width="300" height="31"/>
@@ -581,8 +585,44 @@
             </objects>
             <point key="canvasLocation" x="2061.5999999999999" y="928.78560719640188"/>
         </scene>
+        <!--My Collection View Controller-->
+        <scene sceneID="xhe-K9-gxD">
+            <objects>
+                <viewController id="LbV-H1-aMI" customClass="MyCollectionViewController" customModule="iPresent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkk-LN-v2L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSw-9g-jAK" customClass="LDGradientView" customModule="iPresent" customModuleProvider="target">
+                                <rect key="frame" x="47" y="38" width="281" height="609"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="310"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.69411764710000001" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xXL-Ih-sZG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I99-UR-RsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4188" y="1998"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gradient" width="1390" height="698"/>
         <image name="messi" width="359" height="337.5"/>
+        <image name="ronaldinho" width="600" height="400"/>
+        <image name="ronaldinho_kit" width="249.5" height="186.5"/>
     </resources>
 </document>
