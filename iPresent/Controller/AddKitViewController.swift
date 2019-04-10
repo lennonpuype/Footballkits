@@ -25,7 +25,7 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
         // Do any additional setup after loading the view.
     }
     
@@ -39,11 +39,12 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         kit.moreinfo = moreinfo;
        // kit.image = image;
 
-        //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
+        
         
         do{
             try context.save();
             navigationController!.popViewController(animated: true)
+            
         } catch {
             print("Error saving context: \(error)");
         }
