@@ -146,5 +146,29 @@
       "national_team": "Argentina",
       "bio": "With 1,114 official games played, he is seventh on the list of players in history with the most career appearances. He is also the foreign player with the most appearances in Serie A (615), and holds the fourth-most appearances in the league, behind only Paolo Maldini, Gianluigi Buffon and Francesco Totti. He is the most capped player in the history of Inter (858), and won 16 trophies with the club: five Scudetti, four Coppa Italia, four Supercoppa Italiana, one UEFA Cup, one Champions League and the FIFA Club World Cup. He is also the most capped player as captain in the Champions League (82)."
     }
+  ],
+  "myCollection": [
+    {
+      "id": 1,
+      "playerName": "Ronaldinho",
+      "name": "Ronaldinho",
+      "year": 2004,
+      "team": "Barcelona",
+      "signed": true,
+      "matchworn": false,
+      "description": "Won on a bid website",
+      "brand": "Nike"
+  },
+    {
+        "id": 2,
+        "playerName": "Paul Pogba",
+        "year": 2016,
+        "name": "pogba",
+        "team": "Juventus",
+        "signed": true,
+        "matchworn": true,
+        "description": "UCL Final VS Barcelona",
+        "brand": "Adidas"
+    }
   ]
 }
