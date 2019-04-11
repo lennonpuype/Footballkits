@@ -146,5 +146,44 @@
       "national_team": "Argentina",
       "bio": "With 1,114 official games played, he is seventh on the list of players in history with the most career appearances. He is also the foreign player with the most appearances in Serie A (615), and holds the fourth-most appearances in the league, behind only Paolo Maldini, Gianluigi Buffon and Francesco Totti. He is the most capped player in the history of Inter (858), and won 16 trophies with the club: five Scudetti, four Coppa Italia, four Supercoppa Italiana, one UEFA Cup, one Champions League and the FIFA Club World Cup. He is also the most capped player as captain in the Champions League (82)."
     }
+  ],
+  "myCollection": [
+    {
+      "id": 1,
+      "playerName": "Ronaldinho",
+      "backName": "Ronaldinho #10",
+      "name": "Ronaldinho",
+      "year": "2004",
+      "team": "Barcelona",
+      "signed": true,
+      "matchworn": false,
+      "description": "Won this wonderfull piece of history on a bidding website. So Stunned with this shirt from one of the best players ever on this planet!",
+      "brand": "Nike"
+  },
+    {
+        "id": 2,
+        "playerName": "Paul Pogba",
+        "backName": "Pogba #8",
+        "year": "2016",
+        "name": "Pogba",
+        "team": "Juventus",
+        "signed": true,
+        "matchworn": true,
+        "description": "UCL Final VS Barcelona",
+        "brand": "Adidas"
+    }
+    ,
+    {
+        "id": 3,
+        "playerName": "Jose Izquierdo",
+        "backName": "Izquierdo #11",
+        "name": "Izquierdo",
+        "year": "2016",
+        "team": "Club Brugge",
+        "signed": true,
+        "matchworn": false,
+        "description": "Christmas Present",
+        "brand": "Nike"
+    }
   ]
 }

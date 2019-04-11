@@ -29,8 +29,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func changeBasicAppTheme(){
-        
-        //My Collections
+     
         
         
     }
@@ -69,7 +68,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 national: subJSON["national"].stringValue,
                 bio: subJSON["bio"].stringValue)
             tempList.append(item);
-            print(tempList.count)
+           
         }
         
         footballers = AllFootballers(list: tempList);
@@ -109,6 +108,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             vc.footballer = selectedFootballer;
             
         }
+        
+        
     }
 
     //IBActions on normal pages
