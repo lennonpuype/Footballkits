@@ -14,6 +14,7 @@
 		C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CAE225B6E240007C197 /* AddKitViewController.swift */; };
 		C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */; };
 		C3143847225E1AD00055234E /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143846225E1AD00055234E /* LDGradientView.swift */; };
+		C3143849225F3D8B0055234E /* MyCollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */; };
 		C3269C64225DF64C00746519 /* MyKitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */; };
 		C3269C6A225DF68300746519 /* AllKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3269C69225DF68300746519 /* AllKits.swift */; };
 		C3269C6E225DF8E100746519 /* AnyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3269C6D225DF8E100746519 /* AnyKit.swift */; };
@@ -40,6 +41,7 @@
 		C3070CAE225B6E240007C197 /* AddKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKitViewController.swift; sourceTree = "<group>"; };
 		C3070CD6225B7DD10007C197 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C3143846225E1AD00055234E /* LDGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
+		C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailViewController.swift; sourceTree = "<group>"; };
 		C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKitCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3269C69225DF68300746519 /* AllKits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllKits.swift; sourceTree = "<group>"; };
 		C3269C6D225DF8E100746519 /* AnyKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyKit.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				C3A68317225D48E700E792E4 /* KitViewController.swift */,
 				C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */,
 				C3269C6F225E033900746519 /* MyCollectionViewController.swift */,
+				C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3143849225F3D8B0055234E /* MyCollectionDetailViewController.swift in Sources */,
 				C3ED0566225A202A00692FAA /* Footballer.swift in Sources */,
 				C3070CA7225A582E0007C197 /* UIColor.swift in Sources */,
 				C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */,
@@ -455,6 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69HN3J9BK7;
 				INFOPLIST_FILE = "$(SRCROOT)/iPresent/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69HN3J9BK7;
 				INFOPLIST_FILE = "$(SRCROOT)/iPresent/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

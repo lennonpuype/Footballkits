@@ -13,6 +13,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
 
     var myCollection:AllKits?;
     var gl:CAGradientLayer!;
+    var index = 0;
     
     @IBOutlet weak var LCGradientView: LDGradientView!
     
@@ -80,28 +81,28 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         myCell.layer.borderWidth =  4;
         
         //Border rondom img
-        
         myCell.playerImage.layer.borderColor =  UIColor.customPurple.cgColor;
         myCell.playerImage.layer.borderWidth =  4;
-        
-       
         
         return myCell;
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print(indexPath.item)
-//        performSegue(withIdentifier: "gotoFootballerDetail", sender: indexPath);
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "gotoMyCollectionDetail", sender: indexPath);
     }
-    */
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "gotoMyCollectionDetail"{
+            let vc = segue.destination as! MyCollectionDetailViewController;
+            let index = (sender as! NSIndexPath).item;
+            let selectedFootballer = myCollection?.list[index];
+            
+            vc.footballer = selectedFootballer;
+        }
+    }
+    
 
 }

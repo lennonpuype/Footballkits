@@ -156,7 +156,7 @@
       "team": "Barcelona",
       "signed": true,
       "matchworn": false,
-      "description": "Won on a bid website",
+      "description": "Won this wonderfull piece of history on a bidding website. So Stunned with this shirt of one of the best players ever on this planet!",
       "brand": "Nike"
   },
     {
@@ -169,6 +169,18 @@
         "matchworn": true,
         "description": "UCL Final VS Barcelona",
         "brand": "Adidas"
+    }
+    ,
+    {
+        "id": 3,
+        "playerName": "Jose Izquierdo",
+        "name": "Izquierdo",
+        "year": 2016,
+        "team": "Club Brugge",
+        "signed": true,
+        "matchworn": false,
+        "description": "Christmas Present",
+        "brand": "Nike"
     }
   ]
 }

@@ -29,18 +29,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func changeBasicAppTheme(){
-        let infoButton = UIButton(type: .infoLight)
-        
-        // You will need to configure the target action for the button itself, not the bar button itemr
-        //infoButton.addTarget(self, action: #selector(getInfoAction), for: .touchUpInside)
-        
-        // Create a bar button item using the info button as its custom view
-        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
-        
-        // Use it as required
-        navigationItem.rightBarButtonItem = infoBarButtonItem
-        
-        //My Collections
+     
         
         
     }
@@ -119,6 +108,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             vc.footballer = selectedFootballer;
             
         }
+        
+        
     }
 
     //IBActions on normal pages
