@@ -130,7 +130,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho_kit" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-Gs-eCF" userLabel="kit_img">
-                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="156"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="268.00000000000006" height="156"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho" translatesAutoresizingMaskIntoConstraints="NO" id="4l4-3G-wpJ" userLabel="player_img">
                                                     <rect key="frame" x="194.5" y="0.0" width="145" height="156"/>
@@ -210,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho_kit" translatesAutoresizingMaskIntoConstraints="NO" id="yk9-oD-k9u">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000006" height="186.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186.5" id="hlm-yb-aFp"/>
                                 </constraints>
@@ -271,7 +271,7 @@
                                 <rect key="frame" x="28" y="192" width="347" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YxV-tm-ceI" userLabel="Info Stack">
-                                        <rect key="frame" x="0.0" y="18" width="313" height="162"/>
+                                        <rect key="frame" x="0.0" y="18" width="188" height="162"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DG0-uE-84v" userLabel="Info">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="102"/>
@@ -399,8 +399,8 @@
                                             <constraint firstItem="swa-db-O0I" firstAttribute="top" secondItem="DG0-uE-84v" secondAttribute="bottom" constant="16" id="szp-AL-OWd"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-5i-reH">
-                                        <rect key="frame" x="331" y="0.0" width="16" height="180"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-5i-reH">
+                                        <rect key="frame" x="206" y="0.0" width="141" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="KmT-rI-udu"/>
                                         </constraints>
