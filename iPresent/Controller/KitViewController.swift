@@ -44,6 +44,10 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.kitImage.image = img;
         cell.kitName.text = kits[indexPath.item].playername;
         
+        cell.layer.cornerRadius =  20;
+        cell.layer.borderColor =  UIColor.customPurple.cgColor;
+        cell.layer.borderWidth =  4;
+        
         return cell;
     }
     
