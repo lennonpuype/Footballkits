@@ -39,13 +39,11 @@ class MyCollectionDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         backButton.layer.cornerRadius =  20;
         
-//        kitImage.layer.borderColor =  UIColor.customPurple.cgColor;
-//        kitImage.layer.borderWidth =  4;
-//
-//        playerImage.layer.borderColor =  UIColor.customPurple.cgColor;
-//        playerImage.layer.borderWidth =  4;
-        
         useData();
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     
@@ -77,7 +75,15 @@ class MyCollectionDetailViewController: UIViewController {
     }
     
     @IBAction func goBackToCollection(_ sender: Any) {
+        print("goBack")
         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myCollectionViewController = storyBoard.instantiateViewController(withIdentifier: "myCollectionViewController") as! MyCollectionViewController
+        self.present(myCollectionViewController, animated: true, completion: nil)
+        
+        
+        //navigationController?.popViewController(animated: true)
+       //navigationController?.popToRootViewController(animated: true)
     }
     
     /*
