@@ -22,7 +22,19 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
 
         // Do any additional setup after loading the view.
         loadJSON();
+        
     }
+    
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToCollection(_sender: UIStoryboardSegue){}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    
     
     func loadJSON(){
         let url = Bundle.main.url(forResource: "footballers", withExtension: "json");
@@ -98,8 +110,8 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         
         if segue.identifier == "gotoMyCollectionDetail"{
             let vc = segue.destination as! MyCollectionDetailViewController;
-            //let index = (sender as! NSIndexPath).item;
-            let selectedFootballer = myCollection?.list[1];
+            let index = (sender as! NSIndexPath).item;
+            let selectedFootballer = myCollection?.list[index];
             
             vc.footballer = selectedFootballer;
         }

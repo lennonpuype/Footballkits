@@ -11,11 +11,7 @@ import UIKit
 class MyCollectionDetailViewController: UIViewController {
 
    
-    @IBOutlet weak var backButton: UIButton!
-    
     //Veranderlijke data
-    
-   
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var backName: UILabel!
     @IBOutlet weak var year: UILabel!
@@ -29,7 +25,7 @@ class MyCollectionDetailViewController: UIViewController {
     @IBOutlet weak var matchwornImage: UIImageView!
     @IBOutlet weak var signedImage: UIImageView!
     
-    
+    @IBOutlet weak var BackButtonForStyling: UIButton!
     
     var footballer:AnyKit?;
     
@@ -37,16 +33,20 @@ class MyCollectionDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        backButton.layer.cornerRadius =  20;
+        BackButtonForStyling.layer.cornerRadius = 20;
         
         useData();
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    
+  
     
     func useData(){
         fullName.text = footballer?.playerName;
@@ -74,17 +74,17 @@ class MyCollectionDetailViewController: UIViewController {
         }
     }
     
-    @IBAction func goBackToCollection(_ sender: Any) {
+    @IBAction func goBack(_ sender: Any) {
         print("goBack")
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let myCollectionViewController = storyBoard.instantiateViewController(withIdentifier: "myCollectionViewController") as! MyCollectionViewController
-        self.present(myCollectionViewController, animated: true, completion: nil)
-        
-        
-        //navigationController?.popViewController(animated: true)
-       //navigationController?.popToRootViewController(animated: true)
+        performSegue(withIdentifier: "goBackToCollection", sender: nil)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
+    
+   
     
     /*
     // MARK: - Navigation
