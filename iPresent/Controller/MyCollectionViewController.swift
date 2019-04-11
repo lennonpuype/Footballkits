@@ -13,7 +13,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
 
     var myCollection:AllKits?;
     var gl:CAGradientLayer!;
-    var index = 0;
+
     
     @IBOutlet weak var LCGradientView: LDGradientView!
     
@@ -48,8 +48,9 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
             let item:AnyKit = AnyKit(
                 id: subJSON["id"].intValue,
                 playerName: subJSON["playerName"].stringValue,
+                backName: subJSON["backName"].stringValue,
                 name: subJSON["name"].stringValue,
-                year: subJSON["year"].intValue,
+                year: subJSON["year"].stringValue,
                 team: subJSON["team"].stringValue,
                 signed: subJSON["signed"].boolValue,
                 matchworn: subJSON["matchworn"].boolValue,
@@ -70,7 +71,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionCell", for: indexPath)
             as! MyKitCollectionViewCell;
         
-        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased())_kit")
+        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased() ?? "")_kit")
         myCell.playerImage.image = UIImage(named: myCollection!.list[indexPath.item].name.lowercased())
         myCell.playerName.text =  myCollection!.list[indexPath.item].playerName
         
@@ -97,8 +98,8 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         
         if segue.identifier == "gotoMyCollectionDetail"{
             let vc = segue.destination as! MyCollectionDetailViewController;
-            let index = (sender as! NSIndexPath).item;
-            let selectedFootballer = myCollection?.list[index];
+            //let index = (sender as! NSIndexPath).item;
+            let selectedFootballer = myCollection?.list[1];
             
             vc.footballer = selectedFootballer;
         }

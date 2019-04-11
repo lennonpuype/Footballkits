@@ -151,8 +151,9 @@
     {
       "id": 1,
       "playerName": "Ronaldinho",
+      "backName": "Ronaldinho #10",
       "name": "Ronaldinho",
-      "year": 2004,
+      "year": "2004",
       "team": "Barcelona",
       "signed": true,
       "matchworn": false,
@@ -162,8 +163,9 @@
     {
         "id": 2,
         "playerName": "Paul Pogba",
-        "year": 2016,
-        "name": "pogba",
+        "backName": "Pogba #8",
+        "year": "2016",
+        "name": "Pogba",
         "team": "Juventus",
         "signed": true,
         "matchworn": true,
@@ -174,8 +176,9 @@
     {
         "id": 3,
         "playerName": "Jose Izquierdo",
+        "backName": "Izquierdo #11",
         "name": "Izquierdo",
-        "year": 2016,
+        "year": "2016",
         "team": "Club Brugge",
         "signed": true,
         "matchworn": false,

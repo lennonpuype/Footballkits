@@ -11,8 +11,9 @@ import Foundation
 class AnyKit {
     var id: Int;
     var playerName: String;
+    var backName: String;
     var name: String;
-    var year: Int;
+    var year: String;
     var team: String;
     var signed: Bool;
     var matchworn: Bool;
@@ -20,9 +21,10 @@ class AnyKit {
     var brand: String;
     
     
-    init(id: Int, playerName:String, name:String, year: Int, team: String, signed: Bool, matchworn: Bool, description: String, brand: String){
+    init(id: Int, playerName:String, backName:String, name:String, year: String, team: String, signed: Bool, matchworn: Bool, description: String, brand: String){
         self.id = id;
         self.playerName = playerName;
+        self.backName = backName;
         self.name = name;
         self.year = year;
         self.team = team;
