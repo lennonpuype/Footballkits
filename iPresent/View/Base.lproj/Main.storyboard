@@ -478,6 +478,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="340" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buffon" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-uB-5Lh">
+                                                    <rect key="frame" x="-0.5" y="0.0" width="340" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-CB-3hI" customClass="LDGradientView" customModule="iPresent" customModuleProvider="target">
+                                                    <rect key="frame" x="-0.5" y="0.0" width="340" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-zm-3uR">
                                                     <rect key="frame" x="20" y="124" width="300" height="21"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
@@ -495,6 +512,7 @@
                                         </constraints>
                                         <size key="customSize" width="340" height="156"/>
                                         <connections>
+                                            <outlet property="kitImage" destination="CaJ-uB-5Lh" id="cpA-KG-dKS"/>
                                             <outlet property="kitName" destination="zNy-zm-3uR" id="ylX-92-tGA"/>
                                         </connections>
                                     </collectionViewCell>
@@ -511,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdQ-p0-Ivr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277.60000000000002" y="890.55472263868069"/>
+            <point key="canvasLocation" x="277.60000000000002" y="890.10494752623697"/>
         </scene>
         <!--Your Collection-->
         <scene sceneID="WIH-ij-GSc">
@@ -825,6 +843,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buffon" width="800" height="498"/>
         <image name="messi" width="359" height="337.5"/>
         <image name="ronaldinho" width="600" height="400"/>
         <image name="ronaldinho_kit" width="249.5" height="186.5"/>

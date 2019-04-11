@@ -14,7 +14,9 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     var imagePicker: UIImagePickerController!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
-   
+    
+    var img:UIImage? = nil;
+    var imageData:Data? = nil;
     
     @IBOutlet weak var playername: UITextField!
     @IBOutlet weak var team: UITextField!
@@ -37,7 +39,9 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         kit.playername = playername;
         kit.team = team;
         kit.moreinfo = moreinfo;
+        kit.image = imageData;
        // kit.image = image;
+        print(imageData);
 
         
         
@@ -53,6 +57,9 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imagePicker.dismiss(animated: true, completion: nil);
         imageView.image = info[.originalImage] as? UIImage;
+        
+        img = info[.originalImage] as? UIImage;
+        imageData = img!.jpegData(compressionQuality: 0.30);
     }
     
     // MARK: -IBActions
@@ -80,16 +87,4 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         
         present(imagePicker, animated: true, completion: nil)
     }
-   
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

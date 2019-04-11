@@ -40,6 +40,8 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! KitCollectionViewCell;
         
+        let img = UIImage(data: kits[indexPath.item].image!);
+        cell.kitImage.image = img;
         cell.kitName.text = kits[indexPath.item].playername;
         
         return cell;
