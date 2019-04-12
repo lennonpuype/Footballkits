@@ -739,7 +739,7 @@
         <!--Footballer Detail View Controller-->
         <scene sceneID="a9Y-bx-kp4">
             <objects>
-                <viewController id="GVl-9t-Tfo" customClass="FootballerDetailViewController" customModule="iPresent" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="GVl-9t-Tfo" customClass="FootballerDetailViewController" customModule="iPresent" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C2J-72-m6C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -761,14 +761,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SR0-2V-ITu">
                                                 <rect key="frame" x="116" y="393" width="52.5" height="52.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwd-PB-dsw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="23.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwd-PB-dsw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="26.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="true" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-im-7I7">
-                                                        <rect key="frame" x="0.0" y="33.5" width="52.5" height="19"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="true" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-im-7I7">
+                                                        <rect key="frame" x="0.0" y="36.5" width="52.5" height="16"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
@@ -934,13 +934,30 @@
                                     <constraint firstAttribute="trailing" secondItem="XWB-O8-Mbl" secondAttribute="trailing" id="iNN-tW-B3L"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIy-40-ktU">
+                                <rect key="frame" x="55" y="633" width="265" height="50"/>
+                                <color key="backgroundColor" red="0.38431372549999998" green="0.26274509800000001" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8hk-7I-srq"/>
+                                    <constraint firstAttribute="width" constant="265" id="K4y-dM-wJ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="&lt; Back to featured players">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="GVl-9t-Tfo" eventType="touchUpInside" id="S9M-0b-UXu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uhg-N6-kPg" firstAttribute="top" secondItem="zpq-t1-sgE" secondAttribute="top" constant="20" id="65Y-Mz-bdB"/>
                             <constraint firstItem="zpq-t1-sgE" firstAttribute="leading" secondItem="uhg-N6-kPg" secondAttribute="leading" id="DHh-fB-2sV"/>
                             <constraint firstItem="uhg-N6-kPg" firstAttribute="bottom" secondItem="zpq-t1-sgE" secondAttribute="bottom" id="X4f-Ru-zqE"/>
+                            <constraint firstItem="hIy-40-ktU" firstAttribute="top" secondItem="uhg-N6-kPg" secondAttribute="top" constant="613" id="eAk-R8-uvL"/>
                             <constraint firstItem="uhg-N6-kPg" firstAttribute="trailing" secondItem="zpq-t1-sgE" secondAttribute="trailing" id="p2E-Fh-fwN"/>
+                            <constraint firstItem="uhg-N6-kPg" firstAttribute="trailing" secondItem="hIy-40-ktU" secondAttribute="trailing" constant="55" id="zHW-mw-6mc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uhg-N6-kPg"/>
                     </view>
@@ -950,11 +967,22 @@
                     <connections>
                         <outlet property="FootballerImage" destination="xMD-kA-ZHV" id="zr7-wA-mwP"/>
                         <outlet property="FootballerName" destination="ig5-PV-9na" id="buU-qc-EQI"/>
+                        <outlet property="activeImg" destination="OLO-im-7I7" id="u3N-iF-dKi"/>
+                        <outlet property="age" destination="s2p-oN-cVA" id="O2P-bp-eXZ"/>
+                        <outlet property="backBtn" destination="hIy-40-ktU" id="cax-J4-8lP"/>
+                        <outlet property="clubLabel" destination="S2k-TM-1gp" id="KXh-eI-xcX"/>
+                        <outlet property="country" destination="gGy-V1-3ic" id="PGf-dr-wx3"/>
+                        <outlet property="desc" destination="Od2-Ww-j2a" id="BzT-Pz-R0e"/>
+                        <outlet property="name" destination="m6Y-4V-81s" id="bxG-Gi-VZx"/>
+                        <outlet property="rating" destination="Drq-te-VnZ" id="Y0E-7P-px9"/>
+                        <outlet property="team" destination="p9B-8p-ifM" id="6Zu-93-0XY"/>
+                        <segue destination="xo8-nD-Rrf" kind="unwind" identifier="goBackToFeaturedPlayers" unwindAction="unwindToFeaturedPlayersWith_sender:" id="lKI-1O-NQN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1t-tD-Tda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xo8-nD-Rrf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="51"/>
+            <point key="canvasLocation" x="2868" y="50.374812593703155"/>
         </scene>
         <!--Favorite Players-->
         <scene sceneID="v9z-Zi-53O">

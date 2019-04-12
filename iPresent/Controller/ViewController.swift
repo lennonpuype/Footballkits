@@ -28,6 +28,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToFeaturedPlayers(_sender: UIStoryboardSegue){}
+    
     func changeBasicAppTheme(){
         
         //Tabbar
@@ -52,6 +55,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         navigationItem.titleView = imageView;
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func loadJSON(){
@@ -80,12 +89,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 id: subJSON["id"].intValue,
                 fullName: subJSON["fullName"].stringValue,
                 name: subJSON["name"].stringValue,
+                rating: subJSON["rating"].stringValue,
                 age: subJSON["age"].intValue,
                 alive: subJSON["alive"].boolValue,
                 active: subJSON["active"].boolValue,
                 team: subJSON["team"].stringValue,
-                biggest_period: subJSON["biggest_period"].arrayValue,
-                national: subJSON["national"].stringValue,
+                biggest_period: subJSON["biggest_period"].stringValue,
+                national_team: subJSON["national_team"].stringValue,
                 bio: subJSON["bio"].stringValue)
             tempList.append(item);
            
