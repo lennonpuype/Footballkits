@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YoutubePlayer_in_WKWebView
 
 class FootballerDetailViewController: UIViewController {
 
@@ -29,6 +30,7 @@ class FootballerDetailViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var clubLabel: UILabel!
     
+    @IBOutlet weak var video: WKYTPlayerView!
     
     
     var footballer:Footballer?;
@@ -72,6 +74,8 @@ class FootballerDetailViewController: UIViewController {
         }else{
             age.text = "\(footballer?.age ?? 0) ✝";
         }
+        
+        video.load(withVideoId: "\(footballer?.video ?? "")")
     }
     
     override func viewWillAppear(_ animated: Bool) {

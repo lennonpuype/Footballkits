@@ -96,7 +96,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 team: subJSON["team"].stringValue,
                 biggest_period: subJSON["biggest_period"].stringValue,
                 national_team: subJSON["national_team"].stringValue,
-                bio: subJSON["bio"].stringValue)
+                bio: subJSON["bio"].stringValue,
+                video: subJSON["video"].stringValue)
+            
             tempList.append(item);
            
         }

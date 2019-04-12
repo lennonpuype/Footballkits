@@ -20,8 +20,9 @@ class Footballer{
     var biggest_period: String;
     var national_team: String;
     var bio: String;
+    var video: String;
     
-    init(id: Int, fullName:String, name: String, rating: String, age: Int, alive: Bool, active: Bool, team: String, biggest_period: String, national_team: String, bio: String){
+    init(id: Int, fullName:String, name: String, rating: String, age: Int, alive: Bool, active: Bool, team: String, biggest_period: String, national_team: String, bio: String, video: String){
         self.id = id;
         self.fullName = fullName;
         self.name = name;
@@ -33,5 +34,6 @@ class Footballer{
         self.biggest_period = biggest_period;
         self.national_team = national_team;
         self.bio = bio;
+        self.video = video;
     }
 }
