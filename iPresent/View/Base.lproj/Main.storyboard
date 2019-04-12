@@ -130,7 +130,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho_kit" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-Gs-eCF" userLabel="kit_img">
-                                                    <rect key="frame" x="0.0" y="0.0" width="268.00000000000006" height="156"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="156"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho" translatesAutoresizingMaskIntoConstraints="NO" id="4l4-3G-wpJ" userLabel="player_img">
                                                     <rect key="frame" x="194.5" y="0.0" width="145" height="156"/>
@@ -211,7 +211,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ronaldinho_kit" translatesAutoresizingMaskIntoConstraints="NO" id="yk9-oD-k9u">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000006" height="186.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186.5" id="hlm-yb-aFp"/>
                                 </constraints>
@@ -559,6 +559,9 @@
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Your Collection" id="D5v-kr-aAb"/>
+                    <connections>
+                        <outlet property="addButton" destination="eI3-L8-gbH" id="aoV-te-VLz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Daj-2c-Int" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

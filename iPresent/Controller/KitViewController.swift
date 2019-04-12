@@ -11,6 +11,8 @@ import CoreData
 
 class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
+    @IBOutlet weak var addButton: UIButton!
+    
     var kits = [Kit]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
 
@@ -21,6 +23,8 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         
         // Do any additional setup after loading the view.
         changeBasicAppTheme();
+        
+        addButton.layer.cornerRadius = 20;
     }
     
     func changeBasicAppTheme(){
