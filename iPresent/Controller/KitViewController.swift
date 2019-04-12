@@ -81,6 +81,29 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         return cell;
     }
     
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToYourCollection(_sender: UIStoryboardSegue){}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "gotoYourCollectionDetail", sender: indexPath);
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoYourCollectionDetail"{
+            let vc = segue.destination as! KitDetailViewController;
+            let index = (sender as! NSIndexPath).item;
+            let selectedKit = kits[index];
+            
+            vc.kit = selectedKit;
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     /*
     // MARK: - Navigation
