@@ -50,7 +50,7 @@ class MyCollectionDetailViewController: UIViewController {
   
     
     func useData(){
-        fullName.text = footballer?.playerName;
+        
         backName.text = footballer?.backName;
         year.text = footballer?.year;
         team.text = footballer?.team;

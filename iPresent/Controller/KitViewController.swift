@@ -25,6 +25,8 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         changeBasicAppTheme();
         
         addButton.layer.cornerRadius = 20;
+        addButton.layer.borderColor =  UIColor.white.cgColor;
+        addButton.layer.borderWidth =  4;
     }
     
     func changeBasicAppTheme(){
