@@ -13,6 +13,7 @@
 		C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */; };
 		C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CAE225B6E240007C197 /* AddKitViewController.swift */; };
 		C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */; };
+		C30D8C4122609F07000ECF7C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D8C4022609F07000ECF7C /* UIImage.swift */; };
 		C3143847225E1AD00055234E /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143846225E1AD00055234E /* LDGradientView.swift */; };
 		C3143849225F3D8B0055234E /* MyCollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */; };
 		C3269C64225DF64C00746519 /* MyKitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */; };
@@ -40,6 +41,7 @@
 		C3070CA8225A63460007C197 /* FootballerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballerDetailViewController.swift; sourceTree = "<group>"; };
 		C3070CAE225B6E240007C197 /* AddKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKitViewController.swift; sourceTree = "<group>"; };
 		C3070CD6225B7DD10007C197 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C30D8C4022609F07000ECF7C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C3143846225E1AD00055234E /* LDGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
 		C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailViewController.swift; sourceTree = "<group>"; };
 		C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKitCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,7 +77,9 @@
 		C3070CA5225A58180007C197 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3143846225E1AD00055234E /* LDGradientView.swift */,
 				C3070CA6225A582E0007C197 /* UIColor.swift */,
+				C30D8C4022609F07000ECF7C /* UIImage.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -134,7 +138,6 @@
 		C3ED053D225A000E00692FAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C3143846225E1AD00055234E /* LDGradientView.swift */,
 				C355F462224409070020FF43 /* AppDelegate.swift */,
 				C355F464224409070020FF43 /* ViewController.swift */,
 				C3070C9D225A3EFD0007C197 /* FootballerCollectionViewCell.swift */,
@@ -308,6 +311,7 @@
 				C3269C6A225DF68300746519 /* AllKits.swift in Sources */,
 				C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */,
 				C355F465224409070020FF43 /* ViewController.swift in Sources */,
+				C30D8C4122609F07000ECF7C /* UIImage.swift in Sources */,
 				C355F463224409070020FF43 /* AppDelegate.swift in Sources */,
 				C3A68318225D48E700E792E4 /* KitViewController.swift in Sources */,
 			);

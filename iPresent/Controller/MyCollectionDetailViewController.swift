@@ -44,6 +44,7 @@ class MyCollectionDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         UIApplication.shared.isStatusBarHidden = true
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
     
   

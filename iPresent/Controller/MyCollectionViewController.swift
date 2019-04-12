@@ -22,6 +22,29 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
 
         // Do any additional setup after loading the view.
         loadJSON();
+        changeBasicAppTheme();
+    }
+    
+    func changeBasicAppTheme(){
+        
+        //navigationBar - image
+        let navController = navigationController!
+        
+        let image = UIImage(named: "logo_white.png")
+        let imageView = UIImageView(image: image);
+        
+        let bannerWidth=navController.navigationBar.frame.size.width-50;
+        let bannerHeight=navController.navigationBar.frame.size.height-50;
+        
+        
+        
+        let bannerX = bannerWidth / 2 - image!.size.width / 2
+        let bannerY = bannerHeight / 2 - image!.size.height / 2
+        
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight);
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView;
         
     }
     
