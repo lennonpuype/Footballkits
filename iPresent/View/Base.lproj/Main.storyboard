@@ -239,11 +239,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9W-W7-T2f">
-                                <rect key="frame" x="25" y="140" width="130" height="29"/>
+                                <rect key="frame" x="25" y="140" width="173.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="0gB-1X-sD8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -423,6 +423,7 @@
                             <constraint firstItem="jGc-v8-CYu" firstAttribute="top" secondItem="QwT-Dr-UJT" secondAttribute="bottom" constant="81" id="URR-eP-Toj"/>
                             <constraint firstItem="Umk-2L-RGE" firstAttribute="top" secondItem="hhA-lt-biS" secondAttribute="top" id="eKI-QB-Sgm"/>
                             <constraint firstItem="Umk-2L-RGE" firstAttribute="leading" secondItem="RGY-5G-9kV" secondAttribute="leading" id="o8s-Oe-CeK"/>
+                            <constraint firstItem="QwT-Dr-UJT" firstAttribute="top" secondItem="A9W-W7-T2f" secondAttribute="bottom" constant="23" id="pMf-L7-iMa"/>
                             <constraint firstItem="Umk-2L-RGE" firstAttribute="trailing" secondItem="RGY-5G-9kV" secondAttribute="trailing" id="rF7-6e-SOi"/>
                             <constraint firstItem="yk9-oD-k9u" firstAttribute="leading" secondItem="RGY-5G-9kV" secondAttribute="leading" id="suO-jh-O7S"/>
                             <constraint firstItem="A9W-W7-T2f" firstAttribute="leading" secondItem="RGY-5G-9kV" secondAttribute="leading" constant="25" id="ty5-ns-LNk"/>
@@ -771,7 +772,9 @@
         <scene sceneID="v9z-Zi-53O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Syr-2C-stI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorite Players" id="pkf-Gd-4FD"/>
+                    <tabBarItem key="tabBarItem" title="Favorite Players" image="Favorites_disabled" selectedImage="Favorite_players" id="pkf-Gd-4FD" customClass="MyTabBarItem" customModule="iPresent" customModuleProvider="target">
+                        <color key="badgeColor" red="0.69411764710000001" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9ZR-8O-qN6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -827,7 +830,9 @@
         <scene sceneID="L4t-XB-jus">
             <objects>
                 <navigationController id="hLG-gl-rMP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Collection" id="Cqb-SR-71g"/>
+                    <tabBarItem key="tabBarItem" title="Your Collection" image="Your_Collection_disabled" selectedImage="Your_Collection" id="Cqb-SR-71g" customClass="MyTabBarItem" customModule="iPresent" customModuleProvider="target">
+                        <color key="badgeColor" red="0.69411764710000001" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5ff-Ng-A39">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -855,7 +860,9 @@
         <scene sceneID="HAy-64-RFA">
             <objects>
                 <navigationController id="Zx6-0p-9ii" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Collection" id="3C3-OT-B96"/>
+                    <tabBarItem key="tabBarItem" title="My Collection" image="My_Collection_disabled" selectedImage="My_Collection" id="3C3-OT-B96" customClass="MyTabBarItem" customModule="iPresent" customModuleProvider="target">
+                        <color key="badgeColor" red="0.69411764710000001" green="0.38823529410000002" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aHH-Wh-EFU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -875,6 +882,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Favorite_players" width="22" height="20"/>
+        <image name="Favorites_disabled" width="21.5" height="20"/>
+        <image name="My_Collection" width="22" height="20"/>
+        <image name="My_Collection_disabled" width="22" height="20"/>
+        <image name="Your_Collection" width="22" height="20"/>
+        <image name="Your_Collection_disabled" width="21.5" height="20"/>
         <image name="hazard" width="297" height="274"/>
         <image name="messi" width="359" height="337.5"/>
         <image name="ronaldinho" width="600" height="400"/>

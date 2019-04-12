@@ -29,6 +29,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func changeBasicAppTheme(){
+        
+        //Tabbar
+        UITabBar.appearance().unselectedItemTintColor = UIColor.black
      
         //navigationBar - image
         let navController = navigationController!

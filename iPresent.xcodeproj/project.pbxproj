@@ -14,6 +14,7 @@
 		C3070CAF225B6E240007C197 /* AddKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3070CAE225B6E240007C197 /* AddKitViewController.swift */; };
 		C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3070CD5225B7DD10007C197 /* Model.xcdatamodeld */; };
 		C30D8C4122609F07000ECF7C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D8C4022609F07000ECF7C /* UIImage.swift */; };
+		C30D8C432260B82D000ECF7C /* MyTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D8C422260B82D000ECF7C /* MyTabBarItem.swift */; };
 		C3143847225E1AD00055234E /* LDGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143846225E1AD00055234E /* LDGradientView.swift */; };
 		C3143849225F3D8B0055234E /* MyCollectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */; };
 		C3269C64225DF64C00746519 /* MyKitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 		C3070CAE225B6E240007C197 /* AddKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKitViewController.swift; sourceTree = "<group>"; };
 		C3070CD6225B7DD10007C197 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C30D8C4022609F07000ECF7C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C30D8C422260B82D000ECF7C /* MyTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarItem.swift; sourceTree = "<group>"; };
 		C3143846225E1AD00055234E /* LDGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDGradientView.swift; sourceTree = "<group>"; };
 		C3143848225F3D8B0055234E /* MyCollectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionDetailViewController.swift; sourceTree = "<group>"; };
 		C3269C63225DF64C00746519 /* MyKitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKitCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				C3ED0565225A202A00692FAA /* Footballer.swift */,
 				C3ED0567225A21D100692FAA /* AllFootballers.swift */,
 				C3269C69225DF68300746519 /* AllKits.swift */,
+				C30D8C422260B82D000ECF7C /* MyTabBarItem.swift */,
 				C3269C6D225DF8E100746519 /* AnyKit.swift */,
 			);
 			path = Model;
@@ -302,6 +305,7 @@
 				C3070C9E225A3EFD0007C197 /* FootballerCollectionViewCell.swift in Sources */,
 				C3070CA9225A63460007C197 /* FootballerDetailViewController.swift in Sources */,
 				C3ED0568225A21D100692FAA /* AllFootballers.swift in Sources */,
+				C30D8C432260B82D000ECF7C /* MyTabBarItem.swift in Sources */,
 				C3269C6E225DF8E100746519 /* AnyKit.swift in Sources */,
 				C3269C64225DF64C00746519 /* MyKitCollectionViewCell.swift in Sources */,
 				C3070CD7225B7DD10007C197 /* Model.xcdatamodeld in Sources */,
