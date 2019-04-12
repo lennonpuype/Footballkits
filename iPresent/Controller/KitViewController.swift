@@ -11,6 +11,8 @@ import CoreData
 
 class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
+    @IBOutlet weak var addButton: UIButton!
+    
     var kits = [Kit]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
 
@@ -20,6 +22,34 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         loadKits();
         
         // Do any additional setup after loading the view.
+        changeBasicAppTheme();
+        
+        addButton.layer.cornerRadius = 20;
+        addButton.layer.borderColor =  UIColor.white.cgColor;
+        addButton.layer.borderWidth =  4;
+    }
+    
+    func changeBasicAppTheme(){
+        
+        //navigationBar - image
+        let navController = navigationController!
+        
+        let image = UIImage(named: "logo_white.png")
+        let imageView = UIImageView(image: image);
+        
+        let bannerWidth=navController.navigationBar.frame.size.width-50;
+        let bannerHeight=navController.navigationBar.frame.size.height-50;
+        
+        
+        
+        let bannerX = bannerWidth / 2 - image!.size.width / 2
+        let bannerY = bannerHeight / 2 - image!.size.height / 2
+        
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight);
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView;
+        
     }
     
     func loadKits(){
@@ -51,6 +81,29 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         return cell;
     }
     
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToYourCollection(_sender: UIStoryboardSegue){}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "gotoYourCollectionDetail", sender: indexPath);
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoYourCollectionDetail"{
+            let vc = segue.destination as! KitDetailViewController;
+            let index = (sender as! NSIndexPath).item;
+            let selectedKit = kits[index];
+            
+            vc.kit = selectedKit;
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     /*
     // MARK: - Navigation

@@ -7,5 +7,6 @@ target 'iPresent' do
 
   # Pods for iPresent
   pod 'SwiftyJSON', '~> 4.2'
+  pod 'YoutubePlayer-in-WKWebView', '~> 0.3'
 
 end

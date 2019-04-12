@@ -23,15 +23,44 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
-        //changeBasicAppTheme();
+        changeBasicAppTheme();
         
         
     }
     
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToFeaturedPlayers(_sender: UIStoryboardSegue){}
+    
     func changeBasicAppTheme(){
+        
+        //Tabbar
+        UITabBar.appearance().unselectedItemTintColor = UIColor.black
      
+        //navigationBar - image
+        let navController = navigationController!
+        
+        let image = UIImage(named: "logo_white.png")
+        let imageView = UIImageView(image: image);
+        
+        let bannerWidth=navController.navigationBar.frame.size.width-50;
+        let bannerHeight=navController.navigationBar.frame.size.height-50;
         
         
+        
+        let bannerX = bannerWidth / 2 - image!.size.width / 2
+        let bannerY = bannerHeight / 2 - image!.size.height / 2
+        
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight);
+        imageView.contentMode = .scaleAspectFit
+        
+        navigationItem.titleView = imageView;
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isStatusBarHidden = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func loadJSON(){
@@ -60,13 +89,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 id: subJSON["id"].intValue,
                 fullName: subJSON["fullName"].stringValue,
                 name: subJSON["name"].stringValue,
+                rating: subJSON["rating"].stringValue,
                 age: subJSON["age"].intValue,
                 alive: subJSON["alive"].boolValue,
                 active: subJSON["active"].boolValue,
                 team: subJSON["team"].stringValue,
-                biggest_period: subJSON["biggest_period"].arrayValue,
-                national: subJSON["national"].stringValue,
-                bio: subJSON["bio"].stringValue)
+                biggest_period: subJSON["biggest_period"].stringValue,
+                national_team: subJSON["national_team"].stringValue,
+                bio: subJSON["bio"].stringValue,
+                video: subJSON["video"].stringValue)
+            
             tempList.append(item);
            
         }
