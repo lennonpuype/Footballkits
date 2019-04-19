@@ -25,12 +25,24 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     var img:UIImage? = nil;
     var imageData:Data? = nil;
     
+    var activity = true;
+    
     @IBOutlet weak var playername: UITextField!
     @IBOutlet weak var team: UITextField!
     @IBOutlet weak var moreinfo: UITextField!
     @IBOutlet weak var errorField: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
+    
+    @IBAction func switchPlayerActivity(_ sender: UISwitch) {
+        if(sender.isOn){
+            print("yes!")
+            activity = true;
+        }else{
+            print("No :(")
+            activity = false;
+        }
+    }
+    
     
    
     override func viewDidLoad() {
@@ -49,6 +61,7 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         kit.team = team;
         kit.moreinfo = moreinfo;
         kit.image = imageData;
+        kit.activity = activity;
        // kit.image = image;
         print(imageData);
 

@@ -12,7 +12,8 @@ import CoreData
 class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AddKitDelegate {
     
     
-  
+    @IBOutlet weak var emptyLabel: UILabel!
+    
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var kitCollectionView: UICollectionView!
     
@@ -67,6 +68,13 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
             kits = try context.fetch(request);
         }catch{
             print(error);
+        }
+        
+        //Manage Empty Label
+        if(kits.count == 0){
+            emptyLabel.isHidden = false
+        }else{
+            emptyLabel.isHidden = true
         }
     }
     

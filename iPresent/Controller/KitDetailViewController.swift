@@ -40,6 +40,15 @@ class KitDetailViewController: UIViewController {
         shortInfo.text = kit?.moreinfo;
         let img = UIImage(data: kit!.image!);
         kitImage.image = img;
+        
+      
+        let active = kit!.activity;
+
+        if(active){
+            activeImg.image = UIImage(named: "true")
+        }else{
+            activeImg.image = UIImage(named: "false")
+        }
     }
     
 //    @IBAction func playerActive(_ sender: UISwitch) {
