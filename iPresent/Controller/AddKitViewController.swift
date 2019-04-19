@@ -9,7 +9,14 @@
 import UIKit
 import CoreData
 
+protocol AddKitDelegate: class{
+    func kitAdded();
+}
+
 class AddKitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    
+    weak var delegate: AddKitDelegate?;
 
     var imagePicker: UIImagePickerController!
     
@@ -18,19 +25,33 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     var img:UIImage? = nil;
     var imageData:Data? = nil;
     
+    var activity = true;
+    
     @IBOutlet weak var playername: UITextField!
     @IBOutlet weak var team: UITextField!
     @IBOutlet weak var moreinfo: UITextField!
     @IBOutlet weak var errorField: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-
     
+    @IBAction func switchPlayerActivity(_ sender: UISwitch) {
+        if(sender.isOn){
+            print("yes!")
+            activity = true;
+        }else{
+            print("No :(")
+            activity = false;
+        }
+    }
+    
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
         // Do any additional setup after loading the view.
     }
     
+
    
     func saveKit(playername: String, team: String, moreinfo: String){
         
@@ -40,6 +61,7 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         kit.team = team;
         kit.moreinfo = moreinfo;
         kit.image = imageData;
+        kit.activity = activity;
        // kit.image = image;
         print(imageData);
 
@@ -72,12 +94,17 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         moreInfo = moreinfo.text!
         //let currentImage = imageView.image!;UIImage();
         
-        if(playerName == "" || playerTeam == "" || moreInfo == ""){
+        if(playerName == "" || playerTeam == "" || moreInfo == "" || img == nil){
             errorField.isHidden = false
             view.endEditing(true)
         }else{
             self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
+            delegate?.kitAdded();
         }
+    }
+    
+    @IBAction func hiddenArea(_ sender: Any) {
+        view.endEditing(true)
     }
 
     @IBAction func takePic(_ sender: UIButton) {
