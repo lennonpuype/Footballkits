@@ -9,9 +9,13 @@
 import UIKit
 import CoreData
 
-class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-  
+class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AddKitDelegate {
+    
+    
+    @IBOutlet weak var emptyLabel: UILabel!
+    
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var kitCollectionView: UICollectionView!
     
     var kits = [Kit]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
@@ -27,6 +31,11 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         addButton.layer.cornerRadius = 20;
         addButton.layer.borderColor =  UIColor.white.cgColor;
         addButton.layer.borderWidth =  4;
+    }
+    
+    //komt uit de addKitDelegate
+    func kitAdded() {
+        kitCollectionView.reloadData();
     }
     
     func changeBasicAppTheme(){
@@ -60,6 +69,13 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         }catch{
             print(error);
         }
+        
+        //Manage Empty Label
+        if(kits.count == 0){
+            emptyLabel.isHidden = false
+        }else{
+            emptyLabel.isHidden = true
+        }
     }
     
     
@@ -78,14 +94,19 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.layer.borderColor =  UIColor.customPurple.cgColor;
         cell.layer.borderWidth =  4;
         
+        
+        
         return cell;
     }
+    
+   
     
     //Verplicht nodig voor de unwind segue
     @IBAction func unwindToYourCollection(_sender: UIStoryboardSegue){}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "gotoYourCollectionDetail", sender: indexPath);
+        kitCollectionView.reloadData()
     }
     
     
@@ -100,19 +121,12 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("jdfskldjfslkdfsjkldfsjklfdsjls");
         super.viewWillAppear(animated)
         UIApplication.shared.isStatusBarHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        kitCollectionView.reloadData()
+        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
