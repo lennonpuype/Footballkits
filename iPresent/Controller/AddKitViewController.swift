@@ -9,7 +9,14 @@
 import UIKit
 import CoreData
 
+protocol AddKitDelegate: class{
+    func kitAdded();
+}
+
 class AddKitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    
+    weak var delegate: AddKitDelegate?;
 
     var imagePicker: UIImagePickerController!
     
@@ -25,12 +32,14 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var imageView: UIImageView!
 
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
         // Do any additional setup after loading the view.
     }
     
+
    
     func saveKit(playername: String, team: String, moreinfo: String){
         
@@ -72,12 +81,17 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         moreInfo = moreinfo.text!
         //let currentImage = imageView.image!;UIImage();
         
-        if(playerName == "" || playerTeam == "" || moreInfo == ""){
+        if(playerName == "" || playerTeam == "" || moreInfo == "" || img == nil){
             errorField.isHidden = false
             view.endEditing(true)
         }else{
             self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
+            delegate?.kitAdded();
         }
+    }
+    
+    @IBAction func hiddenArea(_ sender: Any) {
+        view.endEditing(true)
     }
 
     @IBAction func takePic(_ sender: UIButton) {
