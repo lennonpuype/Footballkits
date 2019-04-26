@@ -112,7 +112,7 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vey-oG-QOg">
                                     <size key="itemSize" width="340" height="156"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="76"/>
                                     <inset key="sectionInset" minX="16" minY="10" maxX="16" maxY="32"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -172,6 +172,25 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer_collectionview_mycollection" id="X3h-Vv-fj0">
+                                    <rect key="frame" x="0.0" y="198" width="375" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More kits will be added later" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAr-jM-J4S">
+                                            <rect key="frame" x="69" y="15" width="237" height="24"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.2426712603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NAr-jM-J4S" secondAttribute="trailing" constant="61" id="E0w-Z6-xh3"/>
+                                        <constraint firstItem="NAr-jM-J4S" firstAttribute="top" secondItem="X3h-Vv-fj0" secondAttribute="topMargin" constant="7" id="HwP-NW-Y2w"/>
+                                        <constraint firstItem="NAr-jM-J4S" firstAttribute="centerX" secondItem="X3h-Vv-fj0" secondAttribute="centerX" id="RGF-sa-XNz"/>
+                                        <constraint firstItem="NAr-jM-J4S" firstAttribute="leading" secondItem="X3h-Vv-fj0" secondAttribute="leadingMargin" constant="61" id="enb-SQ-GUp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="NAr-jM-J4S" secondAttribute="bottom" constant="29" id="kbb-kn-vb5"/>
+                                    </constraints>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="1RG-Bv-2P9" id="fXm-VW-nue"/>
                                     <outlet property="delegate" destination="1RG-Bv-2P9" id="hf5-P4-tAX"/>
@@ -200,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbm-HA-ep0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1945" y="896"/>
+            <point key="canvasLocation" x="1944.8" y="895.50224887556226"/>
         </scene>
         <!--My Collection Detail View Controller-->
         <scene sceneID="5ji-Oq-gLJ">

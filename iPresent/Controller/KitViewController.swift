@@ -20,6 +20,12 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     var kits = [Kit]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
 
+    func kitAdded(kit: Kit) {
+        kits.append(kit);
+        print("kitadded")
+        kitCollectionView.reloadData();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -34,9 +40,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     //komt uit de addKitDelegate
-    func kitAdded() {
-        kitCollectionView.reloadData();
-    }
+    
     
     func changeBasicAppTheme(){
         
@@ -80,6 +84,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return kits.count
     }
     
@@ -94,7 +99,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.layer.borderColor =  UIColor.customPurple.cgColor;
         cell.layer.borderWidth =  4;
         
-        
+    
         
         return cell;
     }
@@ -126,7 +131,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         UIApplication.shared.isStatusBarHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        kitCollectionView.reloadData()
+        kitCollectionView.reloadData();
         
     }
 }
