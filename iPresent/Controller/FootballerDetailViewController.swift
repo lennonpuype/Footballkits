@@ -76,7 +76,7 @@ class FootballerDetailViewController: UIViewController {
         }
         
         video.load(withVideoId: "\(footballer?.video ?? "")")
-        print(video);
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
