@@ -90,7 +90,6 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         playerTeam = team.text!
         let moreInfo:String
         moreInfo = moreinfo.text!
-        let currentImage = imageView.image!;UIImage();
         
         if(playerName == "" || playerTeam == "" || moreInfo == "" || img == nil){
             errorField.isHidden = false

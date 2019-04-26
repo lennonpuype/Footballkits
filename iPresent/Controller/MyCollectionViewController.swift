@@ -120,7 +120,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionCell", for: indexPath)
             as! MyKitCollectionViewCell;
         
-        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased() ?? "")_kit")
+        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased() )_kit")
         myCell.playerImage.image = UIImage(named: myCollection!.list[indexPath.item].name.lowercased())
         myCell.playerName.text =  myCollection!.list[indexPath.item].playerName
         

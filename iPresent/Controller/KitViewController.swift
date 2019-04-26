@@ -83,6 +83,16 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "yourCollectionReusableView", for: indexPath)
+        // Customize footerView here
+        return footerView
+        
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return kits.count

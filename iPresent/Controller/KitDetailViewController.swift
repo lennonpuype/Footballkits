@@ -38,8 +38,8 @@ class KitDetailViewController: UIViewController {
         fullName.text = kit?.playername;
         club.text = kit?.team;
         shortInfo.text = kit?.moreinfo;
-//        let img = UIImage(data: kit!.image!);
-//        kitImage.image = img;
+        let img = UIImage(data: kit!.image!);
+        kitImage.image = img;
         
       
         let active = kit!.activity;
@@ -51,9 +51,7 @@ class KitDetailViewController: UIViewController {
         }
     }
     
-//    @IBAction func playerActive(_ sender: UISwitch) {
-//        print("hsjdkhksdfhj");
-//    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
