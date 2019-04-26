@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 protocol AddKitDelegate: class{
-    func kitAdded();
+    func kitAdded(kit: Kit);
 }
 
 class AddKitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -62,13 +62,11 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         kit.moreinfo = moreinfo;
         kit.image = imageData;
         kit.activity = activity;
-       // kit.image = image;
-        print(imageData);
+      
 
-        
-        
         do{
             try context.save();
+            delegate?.kitAdded(kit: kit);
             navigationController!.popViewController(animated: true)
             
         } catch {
@@ -92,14 +90,12 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         playerTeam = team.text!
         let moreInfo:String
         moreInfo = moreinfo.text!
-        //let currentImage = imageView.image!;UIImage();
         
         if(playerName == "" || playerTeam == "" || moreInfo == "" || img == nil){
             errorField.isHidden = false
             view.endEditing(true)
         }else{
             self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
-            delegate?.kitAdded();
         }
     }
     

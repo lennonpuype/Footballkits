@@ -51,9 +51,7 @@ class KitDetailViewController: UIViewController {
         }
     }
     
-//    @IBAction func playerActive(_ sender: UISwitch) {
-//        print("hsjdkhksdfhj");
-//    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

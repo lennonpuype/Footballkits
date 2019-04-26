@@ -59,6 +59,20 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
     
     
     
+   
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer_collectionview_mycollection", for: indexPath)
+            // Customize footerView here
+            return footerView
+  
+    }
+    
+    
+    
+    
+    
     func loadJSON(){
         let url = Bundle.main.url(forResource: "footballers", withExtension: "json");
         
@@ -106,7 +120,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionCell", for: indexPath)
             as! MyKitCollectionViewCell;
         
-        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased() ?? "")_kit")
+        myCell.kitImage.image = UIImage(named: "\(myCollection!.list[indexPath.item].name.lowercased() )_kit")
         myCell.playerImage.image = UIImage(named: myCollection!.list[indexPath.item].name.lowercased())
         myCell.playerName.text =  myCollection!.list[indexPath.item].playerName
         
