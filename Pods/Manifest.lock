@@ -1,16 +1,20 @@
 PODS:
   - SwiftyJSON (4.3.0)
+  - YoutubePlayer-in-WKWebView (0.3.0)
 
 DEPENDENCIES:
-  - SwiftyJSON (~> 4.3)
+  - SwiftyJSON (~> 4.2)
+  - YoutubePlayer-in-WKWebView (~> 0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SwiftyJSON
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  YoutubePlayer-in-WKWebView: 17a33b2fa619d357c9ddd763942ce556660facae
 
-PODFILE CHECKSUM: 096e10a1539584f26e5c42465673ef516310c0a8
+PODFILE CHECKSUM: 60c6f15d3dddfb0ca596629021b311b0fc9dc217
 
 COCOAPODS: 1.7.0.beta.3

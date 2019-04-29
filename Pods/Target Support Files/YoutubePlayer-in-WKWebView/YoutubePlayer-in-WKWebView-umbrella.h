@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "WKYTPlayerView.h"
 
-FOUNDATION_EXPORT double Pods_iPresentVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_iPresentVersionString[];
+FOUNDATION_EXPORT double YoutubePlayer_in_WKWebViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char YoutubePlayer_in_WKWebViewVersionString[];
 
