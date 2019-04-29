@@ -10,6 +10,7 @@ import UIKit
 
 class KitCollectionViewCell: UICollectionViewCell {
     
+    //MARK: IBOutlets
     @IBOutlet weak var kitName: UILabel!
     @IBOutlet weak var kitImage: UIImageView!
     

@@ -11,12 +11,14 @@ import SwiftyJSON
 
 class MyCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var myCollection:AllKits?;
-    var gl:CAGradientLayer!;
-
-    
+    //MARK: IBOutlets
     @IBOutlet weak var LCGradientView: LDGradientView!
     
+    //MARK: Global Variables
+    var myCollection:AllKits?;
+    var gl:CAGradientLayer!;
+    
+    //MARK: View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,8 +27,13 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         changeBasicAppTheme();
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    //MARK: Normal functions
     func changeBasicAppTheme(){
-        
         //navigationBar - image
         let navController = navigationController!
         
@@ -45,34 +52,9 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         imageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = imageView;
-        
     }
     
-    //Verplicht nodig voor de unwind segue
-    @IBAction func unwindToCollection(_sender: UIStoryboardSegue){}
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    
-    
-   
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer_collectionview_mycollection", for: indexPath)
-            // Customize footerView here
-            return footerView
-  
-    }
-    
-    
-    
-    
-    
+    //MARK: Managing data
     func loadJSON(){
         let url = Bundle.main.url(forResource: "footballers", withExtension: "json");
         
@@ -112,6 +94,15 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         myCollection = AllKits(list: tempList);
     }
     
+    //MARK: Collectionview
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer_collectionview_mycollection", for: indexPath)
+        // Customize footerView here
+        return footerView
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return myCollection!.list.count;
     }
@@ -137,14 +128,14 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         return myCell;
     }
     
+    
+    
+    //MARK: Segues
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "gotoMyCollectionDetail", sender: indexPath);
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "gotoMyCollectionDetail"{
             let vc = segue.destination as! MyCollectionDetailViewController;
             let index = (sender as! NSIndexPath).item;
@@ -153,6 +144,10 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
             vc.footballer = selectedFootballer;
         }
     }
+    
+    //MARK: IBActions
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToCollection(_sender: UIStoryboardSegue){}
     
 
 }

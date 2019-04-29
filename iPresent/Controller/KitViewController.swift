@@ -9,28 +9,23 @@
 import UIKit
 import CoreData
 
-class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AddKitDelegate {
+class KitViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
+    //MARK: IBOutlets
     @IBOutlet weak var emptyLabel: UILabel!
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var kitCollectionView: UICollectionView!
     
+    //MARK: Global variables
     var kits = [Kit]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
-
-    func kitAdded(kit: Kit) {
-        kits.append(kit);
-        print("kitadded")
-        kitCollectionView.reloadData();
-    }
     
+    
+    //MARK: View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-       
-        
+
         // Do any additional setup after loading the view.
         changeBasicAppTheme();
         
@@ -39,9 +34,15 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         addButton.layer.borderWidth =  4;
     }
     
-    //komt uit de addKitDelegate
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        //Getting new data
+        loadKits();
+        self.kitCollectionView.reloadData()
+    }
     
-    
+    //MARK: normal functions
     func changeBasicAppTheme(){
         
         //navigationBar - image
@@ -65,6 +66,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
+    //MARK: Getting data
     func loadKits(){
         let request: NSFetchRequest<Kit> = Kit.fetchRequest();
         
@@ -83,7 +85,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     
-    
+    //MARK: Collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return kits.count
@@ -103,15 +105,10 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         return cell;
     }
     
-   
-    
-    //Verplicht nodig voor de unwind segue
-    @IBAction func unwindToYourCollection(_sender: UIStoryboardSegue){}
-    
+    //MARK: Segues
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "gotoYourCollectionDetail", sender: indexPath);
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoYourCollectionDetail"{
@@ -122,18 +119,10 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
             vc.kit = selectedKit;
         }
     }
-    
- 
   
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        loadKits();
-        
-        self.kitCollectionView.reloadData()
-    }
+    //MARK: IBActions
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToYourCollection(_sender: UIStoryboardSegue){}
     
    
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class MyKitCollectionViewCell: UICollectionViewCell {
     
+    //MARK: IBOutlets
     @IBOutlet weak var kitImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
     @IBOutlet weak var playerName: UILabel!

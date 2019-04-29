@@ -11,7 +11,7 @@ import YoutubePlayer_in_WKWebView
 
 class FootballerDetailViewController: UIViewController {
 
-   
+    //MARK: IBOulets
     //info
     @IBOutlet weak var FootballerName: UILabel!
     @IBOutlet weak var FootballerImage: UIImageView!
@@ -32,9 +32,10 @@ class FootballerDetailViewController: UIViewController {
     
     @IBOutlet weak var video: WKYTPlayerView!
     
-    
+    //MARK: Global variables
     var footballer:Footballer?;
     
+    //MARK: View loading
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +45,12 @@ class FootballerDetailViewController: UIViewController {
         backBtn.layer.cornerRadius =  20;
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    //MARK: Data
     func useData(){
         //
         FootballerImage.image = UIImage(named: footballer!.name.lowercased());
@@ -78,30 +85,10 @@ class FootballerDetailViewController: UIViewController {
         video.load(withVideoId: "\(footballer?.video ?? "")")
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
    
-    
+    //MARK: IBActions
     @IBAction func backButton(_ sender: Any) {
         print("Go Back")
         performSegue(withIdentifier: "goBackToFeaturedPlayers", sender: nil)
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

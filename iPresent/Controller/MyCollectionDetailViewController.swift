@@ -10,7 +10,7 @@ import UIKit
 
 class MyCollectionDetailViewController: UIViewController {
 
-   
+    //MARK: IBOutlets
     //Veranderlijke data
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var backName: UILabel!
@@ -27,18 +27,17 @@ class MyCollectionDetailViewController: UIViewController {
     
     @IBOutlet weak var BackButtonForStyling: UIButton!
     
+    //MARK: Global variables
     var footballer:AnyKit?;
     
+    //MARK: View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         BackButtonForStyling.layer.cornerRadius = 20;
-        
         useData();
     }
-    
-   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,11 +45,9 @@ class MyCollectionDetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
     }
-    
   
-    
+    //MARK: managing data
     func useData(){
-        
         backName.text = footballer?.backName;
         year.text = footballer?.year;
         team.text = footballer?.team;
@@ -75,26 +72,9 @@ class MyCollectionDetailViewController: UIViewController {
         }
     }
     
+    //MARK: IBActions
     @IBAction func goBack(_ sender: Any) {
-        print("goBack")
-        
         performSegue(withIdentifier: "goBackToCollection", sender: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
-    
-   
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

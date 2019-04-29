@@ -10,9 +10,7 @@ import UIKit
 
 class KitDetailViewController: UIViewController {
 
-    var kit:Kit?;
-    
-    
+    //MARK: IBOutlets
     @IBOutlet weak var goBack: UIButton!
     
     @IBOutlet weak var playerName: UILabel!
@@ -24,15 +22,25 @@ class KitDetailViewController: UIViewController {
     
     @IBOutlet weak var kitImage: UIImageView!
     
+    //MARK: Global variables
+    var kit:Kit?;
+    
+    //MARK: Loading view
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         goBack.layer.cornerRadius = 20;
         setData();
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    
+    //MARK: Managing data
     func setData(){
         playerName.text = kit?.playername;
         fullName.text = kit?.playername;
@@ -41,7 +49,6 @@ class KitDetailViewController: UIViewController {
         let img = UIImage(data: kit!.image!);
         kitImage.image = img;
         
-      
         let active = kit!.activity;
 
         if(active){
@@ -50,16 +57,8 @@ class KitDetailViewController: UIViewController {
             activeImg.image = UIImage(named: "false")
         }
     }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
+  
+    //MARK: IBActions
     @IBAction func btnGoBackToYourCollection(_ sender: Any) {
         performSegue(withIdentifier: "gotoYourCollection", sender: nil)
     }

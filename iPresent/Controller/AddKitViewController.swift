@@ -9,15 +9,19 @@
 import UIKit
 import CoreData
 
-protocol AddKitDelegate: class{
-    func kitAdded(kit: Kit);
-}
-
 class AddKitViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    
-    weak var delegate: AddKitDelegate?;
 
+    
+    //MARK: IBOutlets
+    @IBOutlet weak var playername: UITextField!
+    @IBOutlet weak var team: UITextField!
+    @IBOutlet weak var moreinfo: UITextField!
+    @IBOutlet weak var errorField: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addImage: UIButton!
+    @IBOutlet weak var imageViewForRadius: UIImageView!
+    
+    //MARK: Global variables
     var imagePicker: UIImagePickerController!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext;
@@ -27,29 +31,12 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     
     var activity = true;
     
-    @IBOutlet weak var playername: UITextField!
-    @IBOutlet weak var team: UITextField!
-    @IBOutlet weak var moreinfo: UITextField!
-    @IBOutlet weak var errorField: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var addImage: UIButton!
-    @IBOutlet weak var imageViewForRadius: UIImageView!
     
-    @IBAction func switchPlayerActivity(_ sender: UISwitch) {
-        if(sender.isOn){
-            print("yes!")
-            activity = true;
-        }else{
-            print("No :(")
-            activity = false;
-        }
-    }
-    
+    //MARK: View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
         // Do any additional setup after loading the view.
-        
         addImage.layer.cornerRadius = 20;
         addImage.layer.borderColor =  UIColor.customPurple.cgColor;
         addImage.layer.borderWidth =  4;
@@ -58,9 +45,8 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
 
-   
+    //MARK: Managing data
     func saveKit(playername: String, team: String, moreinfo: String){
-        
        let kit = Kit(context:context);
       
         kit.playername = playername;
@@ -71,9 +57,7 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
       
         do{
             try context.save();
-            delegate?.kitAdded(kit: kit);
             navigationController!.popViewController(animated: true)
-            
         } catch {
             print("Error saving context: \(error)");
         }
@@ -108,7 +92,16 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
             self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
         }
     }
-    
+
+    @IBAction func switchPlayerActivity(_ sender: UISwitch) {
+        if(sender.isOn){
+            print("yes!")
+            activity = true;
+        }else{
+            print("No :(")
+            activity = false;
+        }
+    }
     
     @IBAction func hiddenArea(_ sender: Any) {
         view.endEditing(true)

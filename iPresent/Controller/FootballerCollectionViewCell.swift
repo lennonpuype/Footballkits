@@ -10,7 +10,7 @@ import UIKit
 
 class FootballerCollectionViewCell: UICollectionViewCell {
     
-   
+    //MARK: IBOulets
     @IBOutlet weak var FootballerImage: UIImageView!
     @IBOutlet weak var FootballerName: UILabel!
     

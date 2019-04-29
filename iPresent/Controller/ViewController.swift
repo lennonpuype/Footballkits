@@ -9,28 +9,30 @@
 import UIKit
 import SwiftyJSON
 
-
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
-    @IBOutlet weak var addKitButton: UIButton!
-    
-    
+    //MARK: Global Variables
     var footballers:AllFootballers?;
     
-
+    //MARK: IBOulets
+    @IBOutlet weak var addKitButton: UIButton!
+    
+    //MARK: View loading
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadJSON();
         changeBasicAppTheme();
-        
-        
     }
     
-    //Verplicht nodig voor de unwind segue
-    @IBAction func unwindToFeaturedPlayers(_sender: UIStoryboardSegue){}
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
+    //MARK: normal functions
     func changeBasicAppTheme(){
         
         //Tabbar
@@ -45,8 +47,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let bannerWidth=navController.navigationBar.frame.size.width-50;
         let bannerHeight=navController.navigationBar.frame.size.height-50;
         
-        
-        
         let bannerX = bannerWidth / 2 - image!.size.width / 2
         let bannerY = bannerHeight / 2 - image!.size.height / 2
         
@@ -57,12 +57,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
+   
+    //MARK: getting data
     func loadJSON(){
         let url = Bundle.main.url(forResource: "footballers", withExtension: "json");
         
@@ -100,12 +96,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 video: subJSON["video"].stringValue)
             
             tempList.append(item);
-           
         }
         
         footballers = AllFootballers(list: tempList);
     }
     
+    //MARK: Collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return footballers!.list.count;
     }
@@ -114,15 +110,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "footballer", for: indexPath)
             as! FootballerCollectionViewCell;
         
-     
-        
         myCell.FootballerImage.image = UIImage(named: footballers!.list[indexPath.item].name.lowercased())
         myCell.FootballerName.text =  footballers!.list[indexPath.item].fullName
         
         myCell.FootballerImage.layer.cornerRadius =  20;
         myCell.FootballerImage.layer.borderColor =  UIColor.customPurple.cgColor;
         myCell.FootballerImage.layer.borderWidth =  4;
-        
         
         return myCell;
     }
@@ -132,21 +125,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         performSegue(withIdentifier: "gotoFootballerDetail", sender: indexPath);
     }
     
+    //MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoFootballerDetail"{
             let vc = segue.destination as! FootballerDetailViewController;
             let index = (sender as! IndexPath).item;
             let selectedFootballer = footballers?.list[index];
             vc.footballer = selectedFootballer;
-            
         }
-        
-        
     }
 
-    //IBActions on normal pages
+    //MARK: IBActions
     @IBAction func addKit(_ sender: Any) {
         print("Naar andere view")
     }
+    //Verplicht nodig voor de unwind segue
+    @IBAction func unwindToFeaturedPlayers(_sender: UIStoryboardSegue){}
 }
 
