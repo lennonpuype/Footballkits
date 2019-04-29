@@ -34,7 +34,7 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         // Do any additional setup after loading the view.
         changeBasicAppTheme();
         
-        addButton.layer.cornerRadius = 20;
+        addButton.layer.cornerRadius = 30;
         addButton.layer.borderColor =  UIColor.white.cgColor;
         addButton.layer.borderWidth =  4;
     }
@@ -84,15 +84,6 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "yourCollectionReusableView", for: indexPath)
-        // Customize footerView here
-        return footerView
-        
-    }
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return kits.count
@@ -108,8 +99,6 @@ class KitViewController: UIViewController, UICollectionViewDataSource, UICollect
         cell.layer.cornerRadius =  20;
         cell.layer.borderColor =  UIColor.customPurple.cgColor;
         cell.layer.borderWidth =  4;
-        
-    
         
         return cell;
     }

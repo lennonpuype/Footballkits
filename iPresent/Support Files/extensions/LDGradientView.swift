@@ -113,7 +113,7 @@ class LDGradientView: UIView {
         var x = cos(radians)
         var y = sin(radians)
         // (x,y) is in terms unit circle. Extrapolate to unit square to get full vector length
-        if (fabs(x) > fabs(y)) {
+        if (abs(x) > abs(y)) {
             // extrapolate x to unit length
             x = x > 0 ? 1 : -1
             y = x * tan(radians)

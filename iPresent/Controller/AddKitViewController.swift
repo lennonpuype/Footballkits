@@ -32,6 +32,8 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var moreinfo: UITextField!
     @IBOutlet weak var errorField: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addImage: UIButton!
+    @IBOutlet weak var imageViewForRadius: UIImageView!
     
     @IBAction func switchPlayerActivity(_ sender: UISwitch) {
         if(sender.isOn){
@@ -43,12 +45,16 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!)
         // Do any additional setup after loading the view.
+        
+        addImage.layer.cornerRadius = 20;
+        addImage.layer.borderColor =  UIColor.customPurple.cgColor;
+        addImage.layer.borderWidth =  4;
+        
+        imageViewForRadius.layer.cornerRadius = 20;
     }
     
 
@@ -81,8 +87,9 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
         imageData = img!.jpegData(compressionQuality: 0.30);
     }
     
+   
     // MARK: -IBActions
-    @IBAction func saveKitButton(_ sender: Any) {
+    @IBAction func saveKitBtn(_ sender: Any) {
         let playerName:String
         playerName = playername.text!
         let playerTeam:String
@@ -101,6 +108,7 @@ class AddKitViewController: UIViewController, UINavigationControllerDelegate, UI
             self.saveKit(playername: playerName, team: playerTeam, moreinfo: moreInfo);
         }
     }
+    
     
     @IBAction func hiddenArea(_ sender: Any) {
         view.endEditing(true)
